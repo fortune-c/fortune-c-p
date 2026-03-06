@@ -1,9 +1,29 @@
 @import "tailwindcss";
 @import "@fontsource/jetbrains-mono";
 
+
 @theme {
     --color-light-yellow: rgba(251, 208, 80, 1);
     --color-dark-yellow: rgba(241, 180, 33, 1);
+    --color-dark-green: rgba(3, 21, 4, 1);
+    --font-jetbrains: 'JetBrains Mono', monospace;
+    --font-bitcount: 'Bitcount', sans-serif;
+    --font-porter: 'Porter Sans Block', sans-serif;
+    --font-chela: 'Chela One', cursive;
+}
+
+@font-face {
+    font-family: 'Porter Sans Block';
+    src: url('./files/porter-sans-block/PorterSansBlock-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chela One';
+    src: url('./files/Bitcount_Ink,Chela_One,JetBrains_Mono/Chela_One/ChelaOne-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
