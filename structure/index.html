@@ -1,15 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fortune-c</title>
     <link rel="stylesheet" href="../styles/output.css" />
-</head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+  </head>
+  <body class="bg-[url(../assets/bg.png)] bg-cover bg-center min-h-screen">
+    <div class="flex flex-col m-10">
+      <header class="flex flex-row justify-between">
+        <img src="../assets/logo.png" alt="logo" class="w-11 h-13" />
+      </header>
+
+      <div class="flex flex-col ml-4 items-center">
+        <h1
+          class="font-bitcount text-[48px] uppercase tracking-[24.2%] leading-[100%] bg-gradient-to-r from-light-yellow to-dark-yellow bg-clip-text text-transparent"
+        >
+          Fortunate Adesina
+        </h1>
+        <p
+          class="font-Poppins italic font-extrabold text-[40px] leading-[100%] tracking-[24.2%] text-white align-middle lowercase"
+        >
+          software engineer
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center mt-3">
+        <img
+          src="../assets/hero.svg"
+          alt="structure"
+          class="w-[600px] h-[600px]"
+        />
+        <button
+          class="relative mt-[-140px] hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+        >
+          <img src="../assets/slide-next.svg" alt="slide right">
+        </div>
+      </div>
+    </div>
     <script src="../scripts/script.ts"></script>
-</body>
+  </body>
 </html>

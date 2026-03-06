@@ -1,6 +1,17 @@
 {
-  "dependencies": {
+  "name": "fortune-c-p",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
+    "build:ts": "tsc --watch"
+  },
+  "devDependencies": {
     "@tailwindcss/cli": "^4.2.1",
-    "tailwindcss": "^4.2.1"
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.8"
   }
 }

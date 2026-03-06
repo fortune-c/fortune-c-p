@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@import "@fontsource/jetbrains-mono";
+
+@theme {
+    --color-light-yellow: rgba(251, 208, 80, 1);
+    --color-dark-yellow: rgba(241, 180, 33, 1);
+}
+
+@font-face {
+    font-family: 'Bitcount';
+    src: url('../assets/fonts/fonts/Bitcount_Ink/BitcountInk.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
