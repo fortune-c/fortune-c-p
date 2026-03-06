@@ -44,18 +44,15 @@ It includes a **public portfolio website** and a **TypeScript-powered admin dash
 ## 📂 Project Structure
 
 ```
-portfolio/
-│
-├── frontend/
-│   ├── index.html
-│   ├── styles/
-│   ├── scripts/
-│   └── assets/
+fortune-c-p/
 │
 ├── admin/
+│   ├── backend
+|   ├── dashboard
+│
+├── portfolio/
 │   ├── backend/
-│   │   └── typescript-api/
-│   └── dashboard/
+│   ├── frontend/
 │
 ├── public/
 │
