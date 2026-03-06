@@ -69,7 +69,7 @@ portfolio/
 Clone the repository:
 
 ```bash
-git clone (https://github.com/fortune-c/fortune-c-p)
+git clone https://github.com/fortune-c/fortune-c-p
 ```
 
 Navigate into the project folder:
