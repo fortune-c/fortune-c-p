@@ -6,36 +6,47 @@
     <title>fortune-c</title>
     <link rel="stylesheet" href="../styles/output.css" />
   </head>
-  <body class="bg-[url(../assets/bg.png)] bg-cover bg-center min-h-screen">
-    <div class="flex flex-col m-10">
+  <body
+    class="bg-[url(../assets/bg.png)] bg-cover bg-center min-h-screen max-sm:overflow-hidden"
+  >
+    <div class="flex flex-col m-10 max-sm:mt-[30%]">
       <header class="flex flex-row justify-between">
-        <img src="../assets/logo.png" alt="logo" class="w-11 h-13" />
+        <img
+          src="../assets/logo.png"
+          alt="logo"
+          class="w-11 h-13 max-sm:w-8 max-sm:h-8"
+        />
       </header>
 
-      <div class="flex flex-col ml-4 items-center">
+      <div class="flex flex-col items-center mt-2 max-sm:mt-4">
         <h1
-          class="font-bitcount text-[48px] uppercase tracking-[24.2%] leading-[100%] bg-gradient-to-r from-light-yellow to-dark-yellow bg-clip-text text-transparent"
+          class="font-bitcount text-[48px] max-sm:text-[20px] uppercase tracking-[24.2%] leading-[100%] bg-gradient-to-r from-light-yellow to-dark-yellow bg-clip-text text-transparent"
         >
           Fortunate Adesina
         </h1>
         <p
-          class="font-Poppins italic font-extrabold text-[40px] leading-[100%] tracking-[24.2%] text-white align-middle lowercase"
+          class="font-Poppins italic font-extrabold text-[40px] max-sm:text-[16px] leading-[100%] tracking-[24.2%] text-white align-middle lowercase"
         >
           software engineer
         </p>
       </div>
 
-      <div class="flex flex-col items-center mt-3">
+      <div class="flex flex-col items-center mt-3 max-sm:-mt-30">
         <img
           src="../assets/hero.svg"
           alt="structure"
           class="w-[600px] h-[600px]"
         />
-        <button
-          class="relative mt-[-140px] hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+        <a
+          href="./about.html"
+          class="relative mt-[-140px] max-sm:mt-[-240px] hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
         >
-          <img src="../assets/slide-next.svg" alt="slide right">
-        </div>
+          <img
+            src="../assets/slide-next.svg"
+            alt="slide right"
+            class="max-sm:w-19 max-sm:h-19"
+          />
+        </a>
       </div>
     </div>
     <script src="../scripts/script.ts"></script>
