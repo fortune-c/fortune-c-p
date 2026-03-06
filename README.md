@@ -46,16 +46,25 @@ It includes a **public portfolio website** and a **TypeScript-powered admin dash
 ```
 fortune-c-p/
 │
-├── admin/
-│   ├── backend
-|   ├── dashboard
+├── backend/
+│   ├── controllers
+|   ├── models
+|   ├── routes
 │
-├── portfolio/
-│   ├── backend/
-│   ├── frontend/
+├── structure/
+│   ├── index.html
+│   ├── ....
+├── screeshot/
+│   ├── ....
+│   ├── ....
+├── scripts/
+│   ├── script.ts
+│   ├── ....
+├── styles/
+│   ├── input.css
+│   ├── output.css
 │
-├── public/
-│
+└── .gitignore
 └── README.md
 ```
 
@@ -127,7 +136,7 @@ https://yourportfolio.com
 
 If you'd like to collaborate or connect:
 
-* GitHub: [https://github.com/yourusername](https://github.com/fortune-c)
+* GitHub: [fortune-c](https://github.com/fortune-c)
 
 ---
 
