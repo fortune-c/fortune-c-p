@@ -10,6 +10,8 @@
     --font-bitcount: 'Bitcount', sans-serif;
     --font-porter: 'Porter Sans Block', sans-serif;
     --font-chela: 'Chela One', cursive;
+    --animate-crossfade: avatarfade 16s ease-in-out infinite;
+    --animate-dustfade: dustfade 16s ease-out infinite;
 }
 
 @font-face {
@@ -31,4 +33,53 @@
     src: url('../assets/fonts/fonts/Bitcount_Ink/BitcountInk.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
+}
+
+@keyframes avatarfade {
+
+    0%,
+    12% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    15% {
+        opacity: 0;
+        filter: blur(4px);
+    }
+
+    97% {
+        opacity: 0;
+        filter: blur(4px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes dustfade {
+
+    0%,
+    13% {
+        opacity: 0;
+        transform: scale(0.9) translateY(10px);
+    }
+
+    16% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    21% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-5px);
+    }
+
+    24%,
+    100% {
+        opacity: 0;
+        transform: scale(1.1) translateY(-15px);
+    }
 }
