@@ -11,9 +11,9 @@
   <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
 </head>
 
-<body class="bg-dark-green min-h-screen flex flex-col items-center justify-center py-5">
+<body class="bg-dark-green h-screen flex flex-col items-center justify-center overflow-hidden py-5 px-3">
   <div
-    class="bg-[url(../assets/about-bg.svg)] bg-cover bg-center w-[97%] h-[100vh] max-sm:w-full max-sm:h-screen relative flex flex-col">
+    class="bg-[url(../assets/about-bg.svg)] bg-cover bg-center w-full h-full max-sm:w-full max-sm:h-screen flex flex-col border border-dark-yellow rounded-xl">
     <!-- Navigation -->
     <nav class="m-7 max-sm:m-4 flex flex-row items-center">
       <a href="./index.html">
@@ -34,115 +34,118 @@
     </nav>
 
     <!-- About Me Content Frame -->
-    <div
-      class="relative flex-1 flex flex-col px-5 max-sm:px-3 pb-2 bg-[url(../assets/about-me.svg)] bg-contain bg-center bg-no-repeat">
-      <!-- Content overlay inside the frame -->
-      <div
-        class="relative z-10 flex-1 flex flex-col justify-between px-8 py-6 max-lg:px-5 max-lg:py-4 max-sm:px-3 max-sm:py-3">
-        <!-- Text Content -->
-        <div class="max-w-[50%] max-lg:max-w-[60%] max-md:max-w-full mt-4 max-sm:mt-2">
-          <p
-            class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider">
-            <strong class="text-white font-bold">Fortunate Adesina</strong>
-            is a versatile and results-driven software engineer with a
-            passion for building scalable, efficient, and engaging digital
-            solutions. with a strong foundation in server-side architecture
-            and database management, fortunate designs and develops robust
-            backend systems that power high-performing applications.
-          </p>
+    <div class="flex-1 flex flex-col px-5 max-sm:px-3 pb-2 min-h-0">
+      <!-- SVG Frame as image covering content -->
+      <div class="relative flex-1 flex flex-col w-full min-h-0">
+        <!-- Content layered on top of the frame -->
+        <div
+          class="relative z-10 flex-1 flex flex-col justify-between px-8 py-6 max-lg:px-5 max-lg:py-4 max-sm:px-3 max-sm:py-3">
+          <!-- Text Content -->
+          <div class="max-w-[50%] mb-4 max-lg:max-w-[60%] max-md:max-w-full max-sm:mt-2">
+            <p
+              class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider">
+              <strong class="text-white font-bold">Fortunate Adesina</strong>
+              is a versatile and results-driven software engineer with a
+              passion for building scalable, efficient, and engaging digital
+              solutions. with a strong foundation in server-side architecture
+              and database management, fortunate designs and develops robust
+              backend systems that power high-performing applications.
+            </p>
 
-          <p
-            class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider mt-4 max-sm:mt-3 ml-6 max-sm:ml-2">
-            As a full stack developer, fortunate bridges the gap between
-            frontend and backend technologies, creating seamless user
-            experiences backed by reliable infrastructure. in the gaming
-            space, fortunate combines technical expertise with creativity to
-            develop interactive and immersive game experiences.
-          </p>
+            <p
+              class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider mt-4 max-sm:mt-3 ml-6 max-sm:ml-2">
+              As a full stack developer, fortunate bridges the gap between
+              frontend and backend technologies, creating seamless user
+              experiences backed by reliable infrastructure. in the gaming
+              space, fortunate combines technical expertise with creativity to
+              develop interactive and immersive game experiences.
+            </p>
 
-          <p
-            class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider mt-4 max-sm:mt-3">
-            Working as a freelancer, fortunate collaborates with startups,
-            businesses, and individuals to transform ideas into functional,
-            user-centered products—delivering clean code, optimized
-            performance, and dependable solutions. driven by continuous
-            learning and innovation, fortunate is committed to building
-            technology that is not only functional but impactful.
-          </p>
-        </div>
-
-        <!-- Bottom Section: Social Links + Arrow -->
-        <div class="flex items-end justify-between mt-4 max-sm:mt-3">
-          <!-- Social Icons -->
-          <div class="flex flex-row gap-3 max-sm:gap-2 items-center">
-            <!-- GitHub -->
-            <a href="https://github.com/fortune-c" target="_blank" rel="noopener noreferrer"
-              class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="max-sm:w-5 max-sm:h-5">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-              </svg>
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/fortune-c" target="_blank" rel="noopener noreferrer"
-              class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="max-sm:w-5 max-sm:h-5">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://instagram.com/fortune_c" target="_blank" rel="noopener noreferrer"
-              class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="max-sm:w-5 max-sm:h-5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-              </svg>
-            </a>
-
-            <!-- Slack / Discord -->
-            <a href="#" target="_blank" rel="noopener noreferrer"
-              class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="Discord">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="max-sm:w-5 max-sm:h-5">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="2" y1="12" x2="22" y2="12" />
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-              </svg>
-            </a>
-
-            <!-- Email -->
-            <a href="mailto:fortune@example.com"
-              class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="Email">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="max-sm:w-5 max-sm:h-5">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-            </a>
+            <p
+              class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider mt-4 max-sm:mt-3">
+              Working as a freelancer, fortunate collaborates with startups,
+              businesses, and individuals to transform ideas into functional,
+              user-centered products—delivering clean code, optimized
+              performance, and dependable solutions. driven by continuous
+              learning and innovation, fortunate is committed to building
+              technology that is not only functional but impactful.
+            </p>
           </div>
 
-          <!-- Next Page Arrow -->
-          <a href="./project.html"
-            class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer mx-auto max-sm:mx-0">
-            <img src="../assets/slide-next.svg" alt="Go to Projects" class="w-20 h-20 max-sm:w-14 max-sm:h-14" />
-          </a>
+          <!-- Bottom Section: Social Links -->
+          <div class="flex items-end justify-between mt-4 max-sm:mt-3">
+            <!-- Social Icons -->
+            <div class="flex flex-row gap-3 max-sm:gap-2 items-center">
+              <!-- GitHub -->
+              <a href="https://github.com/fortune-c" target="_blank" rel="noopener noreferrer"
+                class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="max-sm:w-5 max-sm:h-5">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+              </a>
 
-          <!-- Empty spacer for flex alignment -->
-          <div class="w-[140px] max-sm:hidden"></div>
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/fortune-c" target="_blank" rel="noopener noreferrer"
+                class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="max-sm:w-5 max-sm:h-5">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://instagram.com/fortune_c" target="_blank" rel="noopener noreferrer"
+                class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="max-sm:w-5 max-sm:h-5">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+
+              <!-- Slack / Discord -->
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="Discord">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="max-sm:w-5 max-sm:h-5">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:fortune@example.com"
+                class="text-white hover:text-light-yellow transition-colors duration-200" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="max-sm:w-5 max-sm:h-5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Empty spacer for flex alignment -->
+            <div class="w-[140px] max-sm:hidden"></div>
+          </div>
         </div>
+
+        <!-- Next Page Arrow -->
+        <a href="./project.html"
+          class="absolute -bottom-5 left-1/2 -translate-x-1/2 hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer z-10">
+          <img src="../assets/slide-next.svg" alt="Go to Projects" class="w-20 h-20 max-sm:w-14 max-sm:h-14" />
+        </a>
       </div>
     </div>
   </div>
