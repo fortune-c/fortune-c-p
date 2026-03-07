@@ -1,11 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fortune-c | Projects</title>
+    <meta name="description" content="Projects worked on by Fortunate Adesina." />
+    <link rel="stylesheet" href="../styles/output.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
 </head>
-<body>
-    
+
+<body class="bg-dark-green h-screen flex flex-col items-center justify-center overflow-hidden py-5 px-3">
+    <!-- Content Container with Image Background -->
+    <div
+        class="relative w-full h-full bg-[url(../assets/bg.png)] bg-cover bg-center rounded-sm overflow-hidden flex flex-col max-sm:h-[95vh] shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]">
+
+        <!-- Gradient Overlay -->
+        <div
+            class="absolute inset-0 bg-gradient-to-t from-dark-green/90 via-dark-green/50 to-dark-green/90 mix-blend-multiply pointer-events-none">
+        </div>
+
+        <!-- Navigation -->
+        <nav class="relative z-10 m-7 max-sm:m-4 flex flex-row items-center">
+            <a href="./index.html">
+                <img src="../assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-8 max-sm:h-8" />
+            </a>
+            <ul
+                class="flex flex-row gap-10 max-sm:gap-5 mx-auto text-white font-chela font-bold text-lg max-sm:text-sm">
+                <li>
+                    <a href="./about.html" class="hover:text-light-yellow transition-colors duration-200">About Me</a>
+                </li>
+                <li>
+                    <a href="./project.html"
+                        class="hover:text-light-yellow transition-colors duration-200 text-light-yellow">Project</a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="hover:text-light-yellow transition-colors duration-200">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Project Content Area -->
+        <div class="relative z-10 flex-1 flex flex-col px-10 max-sm:px-4 pb-12 min-h-0">
+
+            <!-- Top Row: Large display & Text -->
+            <div class="flex flex-row max-lg:flex-col gap-10 h-[65%] max-lg:h-auto min-h-0">
+
+                <!-- Left: Large Image Frame -->
+                <div class="flex-1 min-w-0 border border-dark-yellow rounded-sm relative max-lg:h-[300px]">
+                    <!-- Frame Corners Decoration (Top Left) -->
+                    <div class="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-dark-yellow"></div>
+                    <!-- Frame Corners Decoration (Bottom Right) -->
+                    <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-dark-yellow"></div>
+
+                    <!-- Content Area for Selected Project Image -->
+                    <div class="w-full h-full p-3 bg-white/5 backdrop-blur-sm rounded-sm">
+                        <div id="project-main-image" class="w-full h-full transition-opacity duration-300 rounded-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text Content -->
+                <div class="flex-[0.8] flex flex-col justify-center min-w-0">
+                    <p id="project-subtitle"
+                        class="font-jetbrains text-white/90 text-lg max-sm:text-sm transition-opacity duration-300">
+                        Voter Api design</p>
+                    <h2 id="project-title"
+                        class="font-jetbrains font-bold text-4xl max-sm:text-2xl text-white mt-2 tracking-widest uppercase transition-opacity duration-300">
+                        VOTER API</h2>
+                    <hr class="w-full border-t-2 border-white mt-8 max-sm:mt-4 opacity-80" />
+                    <p id="project-desc"
+                        class="font-jetbrains text-white/90 text-lg max-sm:text-sm mt-4 transition-opacity duration-300 leading-relaxed">
+                        CivicVotes is a production-ready
+                        Election & Voting Management System built with ASP.NET Core Web API. It provides comprehensive
+                        features for managing elections, candidates, and secure voting with role-based access control.
+                    </p>
+                    <div class="flex flex-row gap-4 mt-6">
+                        <a id="project-github" href="#"
+                            class="font-jetbrains text-light-yellow font-bold text-lg max-sm:text-sm hover:underline transition-all">GitHub</a>
+                        <a id="project-live" href="#"
+                            class="font-jetbrains text-light-yellow font-bold text-lg max-sm:text-sm hover:underline transition-all">Live
+                            Demo</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Row: Thumbnail Strip -->
+            <div class="flex flex-row gap-4 mt-6 h-[20%] min-h-[100px] max-sm:h-[80px]">
+                <!-- Thumbnail 1 -->
+                <div
+                    class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
+                </div>
+                <!-- Thumbnail 2 -->
+                <div
+                    class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
+                </div>
+                <!-- Thumbnail 3 -->
+                <div
+                    class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
+                </div>
+                <!-- Thumbnail 4 -->
+                <div
+                    class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Contact Page Arrow -->
+        <a href="./contact.html"
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer z-20">
+            <img src="../assets/slide-next.svg" alt="Go to Contact"
+                class="w-16 h-16 max-sm:w-12 max-sm:h-12 drop-shadow-[0_0_15px_rgba(241,180,33,0.6)]" />
+        </a>
+
+    </div>
+
+    <script src="../scripts/projects.js"></script>
 </body>
+
 </html>
