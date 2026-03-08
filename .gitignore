@@ -142,3 +142,11 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+#backend
+admin/backend
+backend/
+backend/backend/bin
+backend/backend/obj
+backend/backend/appsettings.json
+backend/backend/appsettings.Development.json
