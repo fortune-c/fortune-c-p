@@ -1,3 +1,5 @@
+export {};
+
 interface Project {
     id?: string;
     title: string;
@@ -11,7 +13,11 @@ interface Project {
     order?: number;
 }
 
-const API_BASE = 'http://localhost:5001/api';
+const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const API_BASE = IS_LOCAL 
+    ? 'http://localhost:5001/api' 
+    : 'https://fortune-c-p-api.onrender.com/api';
+
 const AUTH_URL = `${API_BASE}/auth`;
 const PROJECTS_URL = `${API_BASE}/projects`;
 
