@@ -1,15 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fortune-c</title>
-    <link rel="stylesheet" href="../styles/output.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fortune-c</title>
+  <meta name="description"
+    content="Fortunate Adesina — a versatile software engineer building scalable, efficient, and engaging digital solutions." />
+  <link rel="stylesheet" href="../styles/output.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
-    <script src="../scripts/script.ts"></script>
+
+<body class="bg-[url(../assets/bg.png)] bg-cover bg-center min-h-screen">
+  <div class="flex flex-col h-screen m-10 max-md:m-6 max-sm:m-4">
+    <!-- Header / Logo -->
+    <header class="flex flex-row justify-between">
+      <img src="../assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-8 max-sm:h-8" />
+    </header>
+
+    <!-- Name & Title -->
+    <div class="flex flex-col items-center mt-2 max-sm:mt-3">
+      <h1
+        class="font-porter text-[48px] max-lg:text-[36px] max-md:text-[28px] max-sm:text-[20px] uppercase tracking-[24.2%] leading-[100%] bg-gradient-to-r from-light-yellow to-dark-yellow bg-clip-text text-transparent">
+        Fortunate Adesina
+      </h1>
+      <p
+        class="font-jetbrains italic font-extrabold text-[40px] max-lg:text-[30px] max-md:text-[22px] max-sm:text-[16px] leading-[100%] tracking-[24.2%] text-white align-middle lowercase">
+        software engineer
+      </p>
+    </div>
+
+    <!-- Hero Image + CTA Arrow -->
+    <div class="flex flex-col items-center flex-1 justify-center max-sm:justify-start max-sm:mt-2">
+      <img src="../assets/hero.svg" alt="3D character illustration"
+        class="w-[600px] h-[600px] max-lg:w-[450px] max-lg:h-[450px] max-md:w-[350px] max-md:h-[350px] max-sm:w-[280px] max-sm:h-[280px]" />
+      <a href="./about.html"
+        class="relative mt-[-140px] max-lg:mt-[-110px] max-md:mt-[-90px] max-sm:mt-[-80px] hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer z-10">
+        <img src="../assets/slide-next.svg" alt="Go to About page"
+          class="w-[100px] h-[95px] max-md:w-[80px] max-md:h-[76px] max-sm:w-[60px] max-sm:h-[57px]" />
+      </a>
+    </div>
+  </div>
 </body>
+
 </html>
