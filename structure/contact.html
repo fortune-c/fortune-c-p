@@ -1,11 +1,374 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fortune-c | Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fortune-c | Contact</title>
+  <meta name="description" content="Get in touch with Fortunate Adesina — Discuss a project or collaboration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitcount+Ink:wght@100..900&family=Chela+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/output.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
 </head>
-<body>
-    
+
+<body class="bg-dark-green h-screen flex flex-col items-center justify-center overflow-hidden py-5 px-3">
+  <!-- Content Container with Image Background -->
+  <div
+    class="relative w-full h-full bg-[url(../assets/nature-bg.svg)] bg-cover bg-center rounded-sm overflow-hidden flex flex-col max-sm:h-[95vh] shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]">
+
+    <!-- Gradient Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-dark-green/90 via-dark-green/50 to-dark-green/90 mix-blend-multiply pointer-events-none">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-10 my-3 mx-7 max-sm:m-4 flex flex-row items-center">
+      <a href="./index.html">
+        <img src="../assets/logo.png" alt="fortune-c logo" class="w-8 h-8 max-sm:w-8 max-sm:h-8" />
+      </a>
+      <ul class="flex flex-row gap-10 max-sm:gap-5 mx-auto text-white font-chela font-bold text-lg max-sm:text-sm">
+        <li>
+          <a href="./about.html" class="hover:text-light-yellow transition-colors duration-200">About Me</a>
+        </li>
+        <li>
+          <a href="./project.html" class="hover:text-light-yellow transition-colors duration-200">Project</a>
+        </li>
+        <li>
+          <a href="./contact.html"
+            class="hover:text-light-yellow transition-colors duration-200 text-light-yellow">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Contact Content Area -->
+    <div class="relative z-10 flex-1 flex flex-col items-center justify-center py-3 px-10 max-sm:px-4 min-h-0">
+
+      <!-- Outer Corner Frame Decorations -->
+      <div class="absolute inset-10 max-sm:inset-4 border border-white/10 rounded-sm pointer-events-none">
+        <div class="absolute -top-2 -left-2 w-12 h-12 border-t-2 border-l-2 border-dark-yellow"></div>
+        <div class="absolute -bottom-2 -right-2 w-12 h-12 border-b-2 border-r-2 border-dark-yellow"></div>
+      </div>
+
+      <!-- Center Typography Section -->
+      <div class="flex flex-row items-center gap-10 max-md:flex-col max-md:gap-4 text-center md:text-left">
+        <!-- Get In Touch -->
+        <div class="flex flex-col">
+          <h1 class="font-chela text-7xl max-xl:text-6xl max-lg:text-5xl max-sm:text-4xl text-white leading-[100%] tracking-[0.15em] capitalize">
+            Get In<br />Touch
+          </h1>
+        </div>
+
+        <!-- Divider Line (horizontal on desktop, hidden on mobile) -->
+        <div class="h-0.5 w-32 lg:w-48 bg-dark-yellow/50 max-md:hidden"></div>
+
+        <!-- Discuss A Project -->
+        <div class="flex flex-col">
+          <h2 class="font-poppins font-extralight text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-xl text-white leading-relaxed uppercase tracking-[0.2em]">
+            Discuss A<br />Project
+          </h2>
+        </div>
+      </div>
+
+      <!-- Social Icons Section -->
+      <div class="flex items-center justify-center mt-8 max-sm:mt-5">
+        <!-- Social Icons -->
+        <div class="flex flex-row justify-center gap-2 max-sm:gap-1 items-center">
+              <!-- GitHub -->
+              <a href="https://github.com/fortune-c" target="_blank" rel="noopener noreferrer"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+                aria-label="GitHub">
+                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_dn_422_5608)">
+                    <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5608)" fill-opacity="0.2"
+                      shape-rendering="crispEdges" />
+                  </g>
+                  <path
+                    d="M26.9003 16.8999C25.587 16.8999 24.2867 17.1586 23.0734 17.6611C21.8602 18.1637 20.7578 18.9002 19.8292 19.8288C17.9538 21.7042 16.9003 24.2477 16.9003 26.8999C16.9003 31.3199 19.7703 35.0699 23.7403 36.3999C24.2403 36.4799 24.4003 36.1699 24.4003 35.8999V34.2099C21.6303 34.8099 21.0403 32.8699 21.0403 32.8699C20.5803 31.7099 19.9303 31.3999 19.9303 31.3999C19.0203 30.7799 20.0003 30.7999 20.0003 30.7999C21.0003 30.8699 21.5303 31.8299 21.5303 31.8299C22.4003 33.3499 23.8703 32.8999 24.4403 32.6599C24.5303 32.0099 24.7903 31.5699 25.0703 31.3199C22.8503 31.0699 20.5203 30.2099 20.5203 26.3999C20.5203 25.2899 20.9003 24.3999 21.5503 23.6899C21.4503 23.4399 21.1003 22.3999 21.6503 21.0499C21.6503 21.0499 22.4903 20.7799 24.4003 22.0699C25.1903 21.8499 26.0503 21.7399 26.9003 21.7399C27.7503 21.7399 28.6103 21.8499 29.4003 22.0699C31.3103 20.7799 32.1503 21.0499 32.1503 21.0499C32.7003 22.3999 32.3503 23.4399 32.2503 23.6899C32.9003 24.3999 33.2803 25.2899 33.2803 26.3999C33.2803 30.2199 30.9403 31.0599 28.7103 31.3099C29.0703 31.6199 29.4003 32.2299 29.4003 33.1599V35.8999C29.4003 36.1699 29.5603 36.4899 30.0703 36.3999C34.0403 35.0599 36.9003 31.3199 36.9003 26.8999C36.9003 25.5867 36.6416 24.2863 36.1391 23.0731C35.6365 21.8598 34.8999 20.7574 33.9713 19.8288C33.0428 18.9002 31.9404 18.1637 30.7271 17.6611C29.5138 17.1586 28.2135 16.8999 26.9003 16.8999Z"
+                    fill="#B1821E" />
+                  <defs>
+                    <filter id="filter0_dn_422_5608" x="2.47955e-05" y="-9.72748e-05" width="53.8" height="53.8"
+                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="4.45" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.964269 0 0 0 0 0.46403 0 0 0 0.37 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_422_5608" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <feTurbulence type="fractalNoise" baseFrequency="0.25 0.25" stitchTiles="stitch" numOctaves="3"
+                        result="noise" seed="2469" />
+                      <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+                      <feComponentTransfer in="alphaNoise" result="coloredNoise1">
+                        <feFuncA type="discrete"
+                          tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 " />
+                      </feComponentTransfer>
+                      <feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+                      <feFlood flood-color="rgba(199, 223, 22, 0.21)" result="color1Flood" />
+                      <feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+                      <feMerge result="effect2_noise_422_5608">
+                        <feMergeNode in="shape" />
+                        <feMergeNode in="color1" />
+                      </feMerge>
+                      <feBlend mode="normal" in="effect2_noise_422_5608" in2="effect1_dropShadow_422_5608"
+                        result="effect2_noise_422_5608" />
+                    </filter>
+                    <linearGradient id="paint0_linear_422_5608" x1="26.9" y1="8.8999" x2="26.9" y2="44.8999"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FBD050" stop-opacity="0" />
+                      <stop offset="1" stop-color="#FFC076" stop-opacity="0.03" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/fortune-c" target="_blank" rel="noopener noreferrer"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+                aria-label="LinkedIn">
+                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_dn_422_5598)">
+                    <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5598)" fill-opacity="0.2"
+                      shape-rendering="crispEdges" />
+                  </g>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.5125 18.3109C16.513 17.834 16.7026 17.3768 17.0398 17.0396C17.3771 16.7024 17.8343 16.5127 18.3111 16.5122H36.2412C36.4776 16.5118 36.7118 16.5581 36.9303 16.6483C37.1488 16.7385 37.3474 16.871 37.5146 17.0381C37.6819 17.2051 37.8146 17.4036 37.905 17.622C37.9955 17.8404 38.042 18.0745 38.0419 18.3109V36.241C38.0419 36.7184 37.8523 37.1762 37.5148 37.5139C37.1773 37.8515 36.7196 38.0414 36.2422 38.0416H18.3111C17.8341 38.0411 17.3767 37.8513 17.0395 37.5139C16.7023 37.1765 16.5127 36.719 16.5125 36.242V18.3109ZM25.0342 24.7208H27.9495V26.1848C28.3703 25.3432 29.4467 24.5857 31.0644 24.5857C34.1656 24.5857 34.9005 26.2621 34.9005 29.3379V35.0353H31.7621V30.0386C31.7621 28.2868 31.3413 27.2984 30.2727 27.2984C28.7901 27.2984 28.1736 28.3642 28.1736 30.0386V35.0353H25.0342V24.7208ZM19.6518 34.9013H22.7912V24.5857H19.6518V34.9013ZM23.2404 21.2213C23.2463 21.4901 23.1985 21.7573 23.0997 22.0074C23.0009 22.2575 22.8532 22.4853 22.6652 22.6775C22.4772 22.8697 22.2527 23.0224 22.0049 23.1266C21.757 23.2309 21.4909 23.2846 21.222 23.2846C20.9531 23.2846 20.687 23.2309 20.4392 23.1266C20.1913 23.0224 19.9668 22.8697 19.7788 22.6775C19.5908 22.4853 19.4431 22.2575 19.3443 22.0074C19.2455 21.7573 19.1977 21.4901 19.2036 21.2213C19.2152 20.6937 19.433 20.1916 19.8103 19.8225C20.1875 19.4535 20.6943 19.2469 21.222 19.2469C21.7498 19.2469 22.2565 19.4535 22.6338 19.8225C23.011 20.1916 23.2288 20.6937 23.2404 21.2213Z"
+                    fill="url(#paint1_linear_422_5598)" />
+                  <defs>
+                    <filter id="filter0_dn_422_5598" x="2.47955e-05" y="-9.72748e-05" width="53.8" height="53.8"
+                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="4.45" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.964269 0 0 0 0 0.46403 0 0 0 0.37 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_422_5598" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <feTurbulence type="fractalNoise" baseFrequency="0.25 0.25" stitchTiles="stitch" numOctaves="3"
+                        result="noise" seed="2469" />
+                      <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+                      <feComponentTransfer in="alphaNoise" result="coloredNoise1">
+                        <feFuncA type="discrete"
+                          tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 " />
+                      </feComponentTransfer>
+                      <feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+                      <feFlood flood-color="rgba(199, 223, 22, 0.21)" result="color1Flood" />
+                      <feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+                      <feMerge result="effect2_noise_422_5598">
+                        <feMergeNode in="shape" />
+                        <feMergeNode in="color1" />
+                      </feMerge>
+                      <feBlend mode="normal" in="effect2_noise_422_5598" in2="effect1_dropShadow_422_5598"
+                        result="effect2_noise_422_5598" />
+                    </filter>
+                    <linearGradient id="paint0_linear_422_5598" x1="26.9" y1="8.8999" x2="26.9" y2="44.8999"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FBD050" stop-opacity="0" />
+                      <stop offset="1" stop-color="#FFC076" stop-opacity="0.03" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_422_5598" x1="27.2772" y1="16.5122" x2="27.2772" y2="38.0416"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="1" stop-color="#B1821E" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://instagram.com/fortune_c" target="_blank" rel="noopener noreferrer"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+                aria-label="Instagram">
+                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_dn_422_5612)">
+                    <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5612)" fill-opacity="0.2"
+                      shape-rendering="crispEdges" />
+                  </g>
+                  <path
+                    d="M27.9281 16.8999C29.0531 16.9029 29.6241 16.9089 30.1171 16.9229L30.3111 16.9299C30.5351 16.9379 30.7561 16.9479 31.0231 16.9599C32.0871 17.0099 32.8131 17.1779 33.4501 17.4249C34.1101 17.6789 34.6661 18.0229 35.2221 18.5779C35.7308 19.0776 36.1243 19.6824 36.3751 20.3499C36.6221 20.9869 36.7901 21.7129 36.8401 22.7779C36.8521 23.0439 36.8621 23.2649 36.8701 23.4899L36.8761 23.6839C36.8911 24.1759 36.8971 24.7469 36.8991 25.8719L36.9001 26.6179V27.9279C36.9025 28.6573 36.8949 29.3867 36.8771 30.1159L36.8711 30.3099C36.8631 30.5349 36.8531 30.7559 36.8411 31.0219C36.7911 32.0869 36.6211 32.8119 36.3751 33.4499C36.1243 34.1174 35.7308 34.7222 35.2221 35.2219C34.7224 35.7306 34.1176 36.1241 33.4501 36.3749C32.8131 36.6219 32.0871 36.7899 31.0231 36.8399L30.3111 36.8699L30.1171 36.8759C29.6241 36.8899 29.0531 36.8969 27.9281 36.8989L27.1821 36.8999H25.8731C25.1434 36.9025 24.4136 36.8948 23.6841 36.8769L23.4901 36.8709C23.2527 36.8619 23.0154 36.8516 22.7781 36.8399C21.7141 36.7899 20.9881 36.6219 20.3501 36.3749C19.6829 36.124 19.0785 35.7305 18.5791 35.2219C18.0701 34.7223 17.6762 34.1175 17.4251 33.4499C17.1781 32.8129 17.0101 32.0869 16.9601 31.0219L16.9301 30.3099L16.9251 30.1159C16.9067 29.3867 16.8983 28.6573 16.9001 27.9279V25.8719C16.8973 25.1425 16.9047 24.4131 16.9221 23.6839L16.9291 23.4899C16.9371 23.2649 16.9471 23.0439 16.9591 22.7779C17.0091 21.7129 17.1771 20.9879 17.4241 20.3499C17.6758 19.6821 18.0703 19.0773 18.5801 18.5779C19.0793 18.0695 19.6833 17.676 20.3501 17.4249C20.9881 17.1779 21.7131 17.0099 22.7781 16.9599C23.0441 16.9479 23.2661 16.9379 23.4901 16.9299L23.6841 16.9239C24.4133 16.9061 25.1427 16.8985 25.8721 16.9009L27.9281 16.8999ZM26.9001 21.8999C25.574 21.8999 24.3023 22.4267 23.3646 23.3644C22.4269 24.3021 21.9001 25.5738 21.9001 26.8999C21.9001 28.226 22.4269 29.4978 23.3646 30.4354C24.3023 31.3731 25.574 31.8999 26.9001 31.8999C28.2262 31.8999 29.498 31.3731 30.4356 30.4354C31.3733 29.4978 31.9001 28.226 31.9001 26.8999C31.9001 25.5738 31.3733 24.3021 30.4356 23.3644C29.498 22.4267 28.2262 21.8999 26.9001 21.8999ZM26.9001 23.8999C27.2941 23.8998 27.6842 23.9774 28.0482 24.1281C28.4122 24.2788 28.7429 24.4997 29.0216 24.7782C29.3002 25.0568 29.5212 25.3874 29.6721 25.7514C29.8229 26.1153 29.9005 26.5054 29.9006 26.8994C29.9007 27.2934 29.8231 27.6835 29.6724 28.0475C29.5217 28.4115 29.3008 28.7422 29.0223 29.0209C28.7437 29.2995 28.4131 29.5205 28.0491 29.6713C27.6852 29.8222 27.2951 29.8998 26.9011 29.8999C26.1055 29.8999 25.3424 29.5838 24.7798 29.0212C24.2172 28.4586 23.9011 27.6956 23.9011 26.8999C23.9011 26.1043 24.2172 25.3412 24.7798 24.7786C25.3424 24.216 26.1055 23.8999 26.9011 23.8999M32.1511 20.3999C31.8196 20.3999 31.5016 20.5316 31.2672 20.766C31.0328 21.0004 30.9011 21.3184 30.9011 21.6499C30.9011 21.9814 31.0328 22.2994 31.2672 22.5338C31.5016 22.7682 31.8196 22.8999 32.1511 22.8999C32.4826 22.8999 32.8006 22.7682 33.035 22.5338C33.2694 22.2994 33.4011 21.9814 33.4011 21.6499C33.4011 21.3184 33.2694 21.0004 33.035 20.766C32.8006 20.5316 32.4826 20.3999 32.1511 20.3999Z"
+                    fill="url(#paint1_linear_422_5612)" />
+                  <defs>
+                    <filter id="filter0_dn_422_5612" x="2.47955e-05" y="-9.72748e-05" width="53.8" height="53.8"
+                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="4.45" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.964269 0 0 0 0 0.46403 0 0 0 0.37 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_422_5612" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <feTurbulence type="fractalNoise" baseFrequency="0.25 0.25" stitchTiles="stitch" numOctaves="3"
+                        result="noise" seed="2469" />
+                      <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+                      <feComponentTransfer in="alphaNoise" result="coloredNoise1">
+                        <feFuncA type="discrete"
+                          tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 " />
+                      </feComponentTransfer>
+                      <feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+                      <feFlood flood-color="rgba(199, 223, 22, 0.21)" result="color1Flood" />
+                      <feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+                      <feMerge result="effect2_noise_422_5612">
+                        <feMergeNode in="shape" />
+                        <feMergeNode in="color1" />
+                      </feMerge>
+                      <feBlend mode="normal" in="effect2_noise_422_5612" in2="effect1_dropShadow_422_5612"
+                        result="effect2_noise_422_5612" />
+                    </filter>
+                    <linearGradient id="paint0_linear_422_5612" x1="26.9" y1="8.8999" x2="26.9" y2="44.8999"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FBD050" stop-opacity="0" />
+                      <stop offset="1" stop-color="#FFC076" stop-opacity="0.03" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_422_5612" x1="26.9" y1="16.8999" x2="26.9" y2="36.9004"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#BCB4A2" />
+                      <stop offset="1" stop-color="#B1821E" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </a>
+
+              <!-- Dribbble -->
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+                aria-label="Dribbble">
+                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_dn_422_5602)">
+                    <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5602)" fill-opacity="0.2"
+                      shape-rendering="crispEdges" />
+                  </g>
+                  <path
+                    d="M29.0512 29.7159C29.8174 31.9861 30.3324 34.3334 30.5872 36.7159C29.5234 37.0881 28.4043 37.2777 27.2772 37.2769C25.2944 37.2801 23.3558 36.691 21.7102 35.5849C22.4771 34.1639 23.5222 32.9119 24.7833 31.9034C26.0443 30.8949 27.4954 30.1506 29.0502 29.7149L29.0512 29.7159ZM36.8502 30.1789C36.1365 32.5253 34.587 34.5284 32.4952 35.8089C32.2143 33.6115 31.7255 31.4458 31.0352 29.3409C33.013 29.1366 35.0106 29.4244 36.8502 30.1789ZM27.4222 25.7619C27.7549 26.4405 28.0649 27.1315 28.3522 27.8349C24.8886 28.8495 21.9493 31.16 20.1452 34.2859C19.1313 33.2469 18.3538 32.0011 17.8659 30.6338C17.378 29.2665 17.1912 27.81 17.3182 26.3639C20.6612 27.0719 24.1882 26.8659 27.4222 25.7619ZM34.9972 20.9209C36.6632 22.9555 37.4671 25.5612 37.2372 28.1809C35.0373 27.3531 32.6654 27.0884 30.3372 27.4109C30.0156 26.5986 29.6637 25.7987 29.2822 25.0129C31.4251 24.0162 33.3633 22.6284 34.9972 20.9209ZM22.5432 18.4669C24.0381 20.1615 25.3551 22.0051 26.4732 23.9689C23.635 24.8728 20.6102 25.021 17.6972 24.3989C18.4642 21.8583 20.2067 19.7252 22.5432 18.4669ZM27.2772 17.2769C29.6652 17.2769 31.8582 18.1139 33.5772 19.5109C32.0894 21.0728 30.3179 22.3373 28.3572 23.2369C27.2536 21.2604 25.9609 19.3957 24.4972 17.6689C25.4008 17.4081 26.3367 17.2761 27.2772 17.2769Z"
+                    fill="url(#paint1_linear_422_5602)" />
+                  <defs>
+                    <filter id="filter0_dn_422_5602" x="2.47955e-05" y="-9.72748e-05" width="53.8" height="53.8"
+                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="4.45" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.964269 0 0 0 0 0.46403 0 0 0 0.37 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_422_5602" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <feTurbulence type="fractalNoise" baseFrequency="0.25 0.25" stitchTiles="stitch" numOctaves="3"
+                        result="noise" seed="2469" />
+                      <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+                      <feComponentTransfer in="alphaNoise" result="coloredNoise1">
+                        <feFuncA type="discrete"
+                          tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 " />
+                      </feComponentTransfer>
+                      <feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+                      <feFlood flood-color="rgba(199, 223, 22, 0.21)" result="color1Flood" />
+                      <feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+                      <feMerge result="effect2_noise_422_5602">
+                        <feMergeNode in="shape" />
+                        <feMergeNode in="color1" />
+                      </feMerge>
+                      <feBlend mode="normal" in="effect2_noise_422_5602" in2="effect1_dropShadow_422_5602"
+                        result="effect2_noise_422_5602" />
+                    </filter>
+                    <linearGradient id="paint0_linear_422_5602" x1="26.9" y1="8.8999" x2="26.9" y2="44.8999"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FBD050" stop-opacity="0" />
+                      <stop offset="1" stop-color="#FFC076" stop-opacity="0.03" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_422_5602" x1="27.2777" y1="17.2769" x2="27.2777" y2="37.2769"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="0.00480769" stop-color="#BCB4A2" />
+                      <stop offset="1" stop-color="#B1821E" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+              </a>
+
+              <!-- Behance -->
+              <a href="#"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+                aria-label="Behance">
+                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_dn_422_5616)">
+                    <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5616)" fill-opacity="0.2"
+                      shape-rendering="crispEdges" />
+                  </g>
+                  <path
+                    d="M29.6602 26.0901C29.5209 26.0895 29.3831 26.118 29.2555 26.1738C29.1279 26.2296 29.0134 26.3114 28.9192 26.414C28.8251 26.5166 28.7534 26.6378 28.7088 26.7697C28.6642 26.9016 28.6476 27.0414 28.6602 27.1801H30.7202C30.7335 27.0362 30.7154 26.8911 30.6673 26.7549C30.6191 26.6186 30.5421 26.4944 30.4413 26.3908C30.3406 26.2872 30.2186 26.2067 30.0837 26.1548C29.9489 26.1029 29.8044 26.0808 29.6602 26.0901ZM24.3902 27.2001H23.1602V29.1401H24.1602C25.1602 29.1401 25.6002 28.8101 25.6002 28.1401C25.6002 27.4701 25.1402 27.2001 24.3902 27.2001ZM25.2602 25.4201C25.2602 24.8901 24.9102 24.5701 24.3102 24.5701H23.1602V26.3101H24.0102C24.9002 26.3101 25.2602 25.9901 25.2602 25.4201Z"
+                    fill="url(#paint1_linear_422_5616)" />
+                  <path
+                    d="M27.1504 17.1501C25.1726 17.1501 23.2392 17.7366 21.5947 18.8355C19.9502 19.9343 18.6685 21.4961 17.9116 23.3233C17.1547 25.1506 16.9567 27.1612 17.3425 29.101C17.7284 31.0409 18.6808 32.8227 20.0793 34.2212C21.4779 35.6197 23.2597 36.5721 25.1995 36.958C27.1393 37.3439 29.15 37.1458 30.9772 36.3889C32.8045 35.6321 34.3663 34.3503 35.4651 32.7058C36.5639 31.0614 37.1504 29.128 37.1504 27.1501C37.1504 25.8369 36.8917 24.5366 36.3892 23.3233C35.8866 22.1101 35.15 21.0077 34.2215 20.0791C33.2929 19.1505 32.1905 18.4139 30.9772 17.9114C29.764 17.4088 28.4636 17.1501 27.1504 17.1501ZM24.8504 30.3501H22.1504V23.8501H24.8504C26.0204 23.8501 26.7904 24.4601 26.7904 25.4501C26.8042 25.7827 26.699 26.1094 26.4938 26.3714C26.2885 26.6335 25.9966 26.8139 25.6704 26.8801C25.8771 26.8849 26.0807 26.9319 26.2687 27.0181C26.4567 27.1042 26.6251 27.2279 26.7636 27.3814C26.9022 27.5349 27.0079 27.7151 27.0744 27.9109C27.1409 28.1067 27.1668 28.314 27.1504 28.5201C27.1504 29.6801 26.1504 30.3501 24.8504 30.3501ZM28.4004 24.3501H31.4004V24.8501H28.4004V24.3501ZM32.1504 28.2001H28.8504V28.3401C28.8332 28.4921 28.8488 28.646 28.8961 28.7914C28.9434 28.9368 29.0213 29.0704 29.1246 29.1832C29.2279 29.296 29.3541 29.3853 29.4949 29.4451C29.6356 29.505 29.7875 29.534 29.9404 29.5301C30.155 29.5635 30.3745 29.5181 30.5583 29.4023C30.7421 29.2865 30.8778 29.1082 30.9404 28.9001H32.1504C32.0426 29.3802 31.7618 29.8036 31.3614 30.0896C30.9611 30.3755 30.4694 30.5039 29.9804 30.4501C29.6679 30.4817 29.3522 30.4444 29.0556 30.3408C28.759 30.2373 28.4888 30.07 28.2638 29.8508C28.0388 29.6315 27.8646 29.3656 27.7535 29.0718C27.6423 28.778 27.5969 28.4634 27.6204 28.1501V27.7101C27.5992 27.4066 27.6438 27.1021 27.7513 26.8174C27.8588 26.5328 28.0266 26.2747 28.2432 26.061C28.4597 25.8473 28.72 25.6829 29.006 25.5792C29.2921 25.4755 29.5972 25.4349 29.9004 25.4601C30.2026 25.4408 30.5055 25.4864 30.7886 25.5939C31.0717 25.7014 31.3285 25.8683 31.5417 26.0834C31.7549 26.2985 31.9195 26.5567 32.0245 26.8408C32.1295 27.1249 32.1724 27.4281 32.1504 27.7301V28.2001Z"
+                    fill="url(#paint2_linear_422_5616)" />
+                  <defs>
+                    <filter id="filter0_dn_422_5616" x="2.47955e-05" y="-9.72748e-05" width="53.8" height="53.8"
+                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="4.45" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.964269 0 0 0 0 0.46403 0 0 0 0.37 0" />
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_422_5616" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <feTurbulence type="fractalNoise" baseFrequency="0.25 0.25" stitchTiles="stitch" numOctaves="3"
+                        result="noise" seed="2469" />
+                      <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+                      <feComponentTransfer in="alphaNoise" result="coloredNoise1">
+                        <feFuncA type="discrete"
+                          tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 " />
+                      </feComponentTransfer>
+                      <feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+                      <feFlood flood-color="rgba(199, 223, 22, 0.21)" result="color1Flood" />
+                      <feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+                      <feMerge result="effect2_noise_422_5616">
+                        <feMergeNode in="shape" />
+                        <feMergeNode in="color1" />
+                      </feMerge>
+                      <feBlend mode="normal" in="effect2_noise_422_5616" in2="effect1_dropShadow_422_5616"
+                        result="effect2_noise_422_5616" />
+                    </filter>
+                    <linearGradient id="paint0_linear_422_5616" x1="26.9" y1="8.8999" x2="26.9" y2="44.8999"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FBD050" stop-opacity="0" />
+                      <stop offset="1" stop-color="#FFC076" stop-opacity="0.03" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_422_5616" x1="26.9423" y1="24.5701" x2="26.9423" y2="29.1401"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="0.00480769" stop-color="#BCB4A2" />
+                      <stop offset="1" stop-color="#B1821E" />
+                    </linearGradient>
+                    <linearGradient id="paint2_linear_422_5616" x1="27.1504" y1="17.1501" x2="27.1504" y2="37.1502"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="0.00480769" stop-color="#BCB4A2" />
+                      <stop offset="1" stop-color="#B1821E" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </a>
+        </div>
+      </div>
+
+      <!-- Footer Message Section -->
+      <div class="mt-8 max-sm:mt-5 text-center max-w-2xl px-4">
+        <p class="font-jetbrains text-white/70 text-sm max-sm:text-xs leading-relaxed tracking-wide">
+          To initiate contact or discuss a collaboration, please send a direct message (DM) on any of my active social media platforms.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../scripts/projects.js"></script>
 </body>
+
 </html>
