@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
-    "build:ts": "tsc --watch"
+    "build:ts": "tsc --watch",
+    "dev": "npm run build:css & npm run build:ts"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.1",

@@ -1,4 +1,13 @@
-const projects = [
+interface Project {
+    title: string;
+    subtitle: string;
+    description: string;
+    github: string;
+    live: string;
+    imageClass: string;
+}
+
+const projects: Project[] = [
     {
         title: "VOTER API",
         subtitle: "Voter Api design",
@@ -34,19 +43,18 @@ const projects = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    const mainTitle = document.getElementById('project-title');
-    const mainSubtitle = document.getElementById('project-subtitle');
-    const mainDescription = document.getElementById('project-desc');
-    const mainGithub = document.getElementById('project-github');
-    const mainLive = document.getElementById('project-live');
-    const mainImage = document.getElementById('project-main-image');
-    const thumbnails = document.querySelectorAll('.project-thumbnail');
+    const mainTitle = document.getElementById('project-title') as HTMLElement | null;
+    const mainSubtitle = document.getElementById('project-subtitle') as HTMLElement | null;
+    const mainDescription = document.getElementById('project-desc') as HTMLElement | null;
+    const mainGithub = document.getElementById('project-github') as HTMLAnchorElement | null;
+    const mainLive = document.getElementById('project-live') as HTMLAnchorElement | null;
+    const mainImage = document.getElementById('project-main-image') as HTMLElement | null;
+    const thumbnails = document.querySelectorAll<HTMLElement>('.project-thumbnail');
 
     if (!mainTitle || !thumbnails.length) return;
 
-    thumbnails.forEach((thumbElement, index) => {
-        const thumb = thumbElement;
-        const p = projects[index];
+    thumbnails.forEach((thumb: HTMLElement, index: number) => {
+        const p: Project | undefined = projects[index];
         if (!p) return;
 
         thumb.style.backgroundImage = p.imageClass;
@@ -70,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     mainImage.style.backgroundImage = p.imageClass;
                 }
 
-                thumbnails.forEach(t => {
+                thumbnails.forEach((t: Element) => {
                     t.classList.remove('border-light-yellow', 'scale-105');
                     t.classList.add('border-dark-yellow');
                 });
@@ -85,5 +93,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    (thumbnails[0]).click();
+    (thumbnails[0] as HTMLElement).click();
 });
