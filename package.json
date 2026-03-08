@@ -5,9 +5,9 @@
   "scripts": {
     "build:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
     "build:ts": "tsc --watch",
-    "build": "tailwindcss -i ./styles/input.css -o ./styles/output.css && tsc && mkdir -p public && cp -r assets styles scripts public/ && cp structure/*.html public/ && mkdir -p public/admin && cp admin/frontend/*.html public/admin/",
+    "build": "tailwindcss -i ./styles/input.css -o ./styles/output.css && tsc && mkdir -p public && cp -r assets styles scripts public/ && cp structure/*.html public/ && mkdir -p public/admin && cp admin/frontend/*.html public/admin/ && cp serve.json public/",
     "dev": "npm run build:css & npm run build:ts",
-    "serve": "npx serve public"
+    "serve": "npm run build && npx serve public"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.1",
