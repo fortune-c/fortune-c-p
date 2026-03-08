@@ -9,36 +9,36 @@ interface Project {
 
 const projects: Project[] = [
     {
-        title: "VOTER API",
-        subtitle: "Voter Api design",
-        description: "CivicVotes is a production-ready Election & Voting Management System built with ASP.NET Core Web API. It provides comprehensive features for managing elections, candidates, and secure voting with role-based access control.",
-        github: "#",
+        title: "CivicVotes",
+        subtitle: "Election & Voting Management System",
+        description: "CivicVotes is a production-ready Election & Voting Management System built with ASP.NET Core Web API. It provides comprehensive features for managing elections, candidates, and secure voting with role-based access control.",
+        github: "https://github.com/fortune-c/civicvote",
         live: "#",
-        imageClass: "url('../assets/project-bg.png')"
+        imageClass: "url('../assets/projects-preview/CivicVotes.png')"
     },
     {
         title: "PORTFOLIO",
-        subtitle: "Personal Website Redesign",
-        description: "A highly interactive, aesthetic portfolio featuring ASCII art translations, custom CSS animations, and a responsive Tailwind CSS grid layout tailored carefully from Figma designs.",
-        github: "#",
+        subtitle: "Personal Website ",
+        description: "A modern developer portfolio website built to showcase my projects, skills, and experience. The site is designed with performance, responsiveness, and maintainability in mind.",
+        github: "https://github.com/fortune-c/fortune-c-p",
         live: "#",
-        imageClass: "url('../assets/project-thumbnails-bg.png')"
+        imageClass: "url('../assets/projects-preview/portfolio.png')"
     },
     {
-        title: "P2P SERVER",
-        subtitle: "C++ Networking Project",
-        description: "A custom multithreaded Peer-to-Peer server built from scratch in C++. Handles concurrent connections, HTTP routing, and custom binary protocols without memory leaks.",
-        github: "#",
+        title: "Netus",
+        subtitle: "C Networking Project",
+        description: "Netus is a minimal HTTP server written from scratch in C, implementing core components directly on top of POSIX sockets to explore low-level networking.",
+        github: "https://github.com/fortune-c/netus",
         live: "#",
-        imageClass: "url('../assets/bg.png')"
+        imageClass: "url('../assets/projects-preview/Netus.png')"
     },
     {
-        title: "INVENTORY APP",
-        subtitle: "Fullstack Dashboard App",
-        description: "A comprehensive pharmacy inventory app featuring secure database access, interactive component views, and complex backend deployment configurations on Render.",
+        title: "",
+        subtitle: "",
+        description: "",
         github: "#",
         live: "#",
-        imageClass: "url('../assets/hero.svg')"
+        imageClass: ""
     }
 ];
 

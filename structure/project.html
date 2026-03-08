@@ -21,7 +21,7 @@
         </div>
 
         <!-- Navigation -->
-        <nav class="relative z-10 m-7 max-sm:m-4 flex flex-row items-center">
+        <nav class="relative z-10 m-7 max-sm:m-4 flex flex-row items-center" data-animate>
             <a href="./index.html">
                 <img src="../assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-8 max-sm:h-8" />
             </a>
@@ -47,7 +47,7 @@
             <div class="flex flex-row max-lg:flex-col gap-10 h-[65%] max-lg:h-auto min-h-0">
 
                 <!-- Left: Large Image Frame -->
-                <div class="flex-1 min-w-0 border border-dark-yellow rounded-sm relative max-lg:h-[300px]">
+                <div class="flex-1 min-w-0 border border-dark-yellow rounded-sm relative max-lg:h-[300px]" data-animate>
                     <!-- Frame Corners Decoration (Top Left) -->
                     <div class="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-dark-yellow"></div>
                     <!-- Frame Corners Decoration (Bottom Right) -->
@@ -61,7 +61,7 @@
                 </div>
 
                 <!-- Right: Text Content -->
-                <div class="flex-[0.8] flex flex-col justify-center min-w-0">
+                <div class="flex-[0.8] flex flex-col justify-center min-w-0" data-animate>
                     <p id="project-subtitle"
                         class="font-jetbrains text-white/90 text-lg max-sm:text-sm transition-opacity duration-300">
                         Voter Api design</p>
@@ -87,7 +87,7 @@
             </div>
 
             <!-- Bottom Row: Thumbnail Strip -->
-            <div class="flex flex-row gap-4 mt-6 h-[20%] min-h-[100px] max-sm:h-[80px]">
+            <div class="flex flex-row gap-4 mt-6 h-[20%] min-h-[100px] max-sm:h-[80px]" data-animate>
                 <!-- Thumbnail 1 -->
                 <div
                     class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
@@ -118,6 +118,7 @@
     </div>
 
     <script src="../scripts/dist/script.js"></script>
+    <script src="../scripts/dist/transitions.js"></script>
 </body>
 
 </html>
