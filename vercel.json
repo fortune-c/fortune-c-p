@@ -1,11 +1,11 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/structure/index.html" },
-    { "source": "/about", "destination": "/structure/about.html" },
-    { "source": "/projects", "destination": "/structure/project.html" },
-    { "source": "/contact", "destination": "/structure/contact.html" },
-    { "source": "/admin/login", "destination": "/admin/frontend/login.html" },
-    { "source": "/admin/dashboard", "destination": "/admin/frontend/dashboard.html" }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/projects", "destination": "/project.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/admin/login", "destination": "/admin/login.html" },
+    { "source": "/admin/dashboard", "destination": "/admin/dashboard.html" }
   ]
 }

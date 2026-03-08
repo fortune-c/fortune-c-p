@@ -5,7 +5,7 @@
   "scripts": {
     "build:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
     "build:ts": "tsc --watch",
-    "build": "tailwindcss -i ./styles/input.css -o ./styles/output.css && tsc && mkdir -p public && cp -r structure assets styles scripts public/ && mkdir -p public/admin && cp -r admin/frontend public/admin/",
+    "build": "tailwindcss -i ./styles/input.css -o ./styles/output.css && tsc && mkdir -p public && cp -r assets styles scripts public/ && cp structure/*.html public/ && mkdir -p public/admin && cp admin/frontend/*.html public/admin/",
     "dev": "npm run build:css & npm run build:ts",
     "serve": "npx serve public"
   },
