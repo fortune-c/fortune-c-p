@@ -5,6 +5,7 @@
   "scripts": {
     "build:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
     "build:ts": "tsc --watch",
+    "build": "tailwindcss -i ./styles/input.css -o ./styles/output.css && tsc",
     "dev": "npm run build:css & npm run build:ts"
   },
   "devDependencies": {

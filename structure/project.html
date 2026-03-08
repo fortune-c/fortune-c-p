@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fortune-c | Projects</title>
     <meta name="description" content="Projects worked on by Fortunate Adesina." />
-    <link rel="stylesheet" href="../styles/output.css" />
-    <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
 </head>
 
 <body class="bg-dark-green h-screen flex flex-col items-center justify-center overflow-hidden py-5 px-3">
@@ -17,25 +17,25 @@
 
         <!-- Gradient Overlay -->
         <div
-            class="absolute inset-0 bg-gradient-to-t from-dark-green/90 via-dark-green/50 to-dark-green/90 mix-blend-multiply pointer-events-none">
+            class="absolute inset-0 bg-linear-to-t from-dark-green/90 via-dark-green/50 to-dark-green/90 mix-blend-multiply pointer-events-none">
         </div>
 
         <!-- Navigation -->
-        <nav class="relative z-10 m-7 max-sm:m-4 flex flex-row items-center">
-            <a href="./index.html">
-                <img src="../assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-8 max-sm:h-8" />
+        <nav class="relative z-10 m-7 max-sm:m-4 flex flex-row items-center" data-animate>
+            <a href="/">
+                <img src="/assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-8 max-sm:h-8" />
             </a>
             <ul
                 class="flex flex-row gap-10 max-sm:gap-5 mx-auto text-white font-chela font-bold text-lg max-sm:text-sm">
                 <li>
-                    <a href="./about.html" class="hover:text-light-yellow transition-colors duration-200">About Me</a>
+                    <a href="/about" class="hover:text-light-yellow transition-colors duration-200">About Me</a>
                 </li>
                 <li>
-                    <a href="./project.html"
+                    <a href="/projects"
                         class="hover:text-light-yellow transition-colors duration-200 text-light-yellow">Project</a>
                 </li>
                 <li>
-                    <a href="./contact.html" class="hover:text-light-yellow transition-colors duration-200">Contact</a>
+                    <a href="/contact" class="hover:text-light-yellow transition-colors duration-200">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -47,7 +47,7 @@
             <div class="flex flex-row max-lg:flex-col gap-10 h-[65%] max-lg:h-auto min-h-0">
 
                 <!-- Left: Large Image Frame -->
-                <div class="flex-1 min-w-0 border border-dark-yellow rounded-sm relative max-lg:h-[300px]">
+                <div class="flex-1 min-w-0 border border-dark-yellow rounded-sm relative max-lg:h-[300px]" data-animate>
                     <!-- Frame Corners Decoration (Top Left) -->
                     <div class="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-dark-yellow"></div>
                     <!-- Frame Corners Decoration (Bottom Right) -->
@@ -61,7 +61,7 @@
                 </div>
 
                 <!-- Right: Text Content -->
-                <div class="flex-[0.8] flex flex-col justify-center min-w-0">
+                <div class="flex-[0.8] flex flex-col justify-center min-w-0" data-animate>
                     <p id="project-subtitle"
                         class="font-jetbrains text-white/90 text-lg max-sm:text-sm transition-opacity duration-300">
                         Voter Api design</p>
@@ -71,9 +71,7 @@
                     <hr class="w-full border-t-2 border-white mt-8 max-sm:mt-4 opacity-80" />
                     <p id="project-desc"
                         class="font-jetbrains text-white/90 text-lg max-sm:text-sm mt-4 transition-opacity duration-300 leading-relaxed">
-                        CivicVotes is a production-ready
-                        Election & Voting Management System built with ASP.NET Core Web API. It provides comprehensive
-                        features for managing elections, candidates, and secure voting with role-based access control.
+                        Loading project details...
                     </p>
                     <div class="flex flex-row gap-4 mt-6">
                         <a id="project-github" href="#"
@@ -87,37 +85,23 @@
             </div>
 
             <!-- Bottom Row: Thumbnail Strip -->
-            <div class="flex flex-row gap-4 mt-6 h-[20%] min-h-[100px] max-sm:h-[80px]">
-                <!-- Thumbnail 1 -->
-                <div
-                    class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
-                </div>
-                <!-- Thumbnail 2 -->
-                <div
-                    class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
-                </div>
-                <!-- Thumbnail 3 -->
-                <div
-                    class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
-                </div>
-                <!-- Thumbnail 4 -->
-                <div
-                    class="project-thumbnail flex-1 border border-dark-yellow rounded-sm cursor-pointer hover:border-light-yellow transition-all duration-200">
-                </div>
+            <div id="thumbnails-container" class="flex flex-row gap-4 mt-6 h-[20%] min-h-[100px] max-sm:h-[80px]" data-animate>
+                <!-- Thumbnails will be injected here by script.ts -->
             </div>
 
         </div>
 
         <!-- Contact Page Arrow -->
-        <a href="./contact.html"
+        <a href="/contact"
             class="absolute bottom-0 left-1/2 -translate-x-1/2 hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer z-20">
-            <img src="../assets/slide-next.svg" alt="Go to Contact"
+            <img src="/assets/slide-next.svg" alt="Go to Contact"
                 class="w-16 h-16 max-sm:w-12 max-sm:h-12 drop-shadow-[0_0_15px_rgba(241,180,33,0.6)]" />
         </a>
 
     </div>
 
-    <script src="../scripts/dist/script.js"></script>
+    <script src="/scripts/dist/script.js"></script>
+    <script src="/scripts/dist/transitions.js"></script>
 </body>
 
 </html>

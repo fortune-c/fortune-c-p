@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fortune-c | Admin Login</title>
+    <link rel="stylesheet" href="/styles/output.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
+</head>
+<body class="bg-dark-green h-screen flex items-center justify-center p-4">
+    <div class="relative w-full max-w-md bg-white/5 backdrop-blur-xl border border-dark-yellow rounded-xl p-8 shadow-2xl overflow-hidden" data-animate>
+        <!-- Decorative frame -->
+        <div class="absolute -top-2 -left-2 w-12 h-12 border-t-2 border-l-2 border-dark-yellow"></div>
+        <div class="absolute -bottom-2 -right-2 w-12 h-12 border-b-2 border-r-2 border-dark-yellow"></div>
+
+        <div class="flex flex-col items-center mb-8">
+            <img src="/assets/logo.png" alt="logo" class="w-12 h-14 mb-4" />
+            <h1 class="font-porter text-2xl text-transparent bg-clip-text bg-linear-to-r from-light-yellow to-dark-yellow uppercase tracking-widest">
+                Admin Panel
+            </h1>
+            <p class="font-jetbrains text-white/60 text-sm mt-2">Login to manage your portfolio</p>
+        </div>
+
+        <form id="login-form" class="space-y-6">
+            <div>
+                <label for="username" class="block font-jetbrains text-white/80 text-sm mb-2">Username</label>
+                <input type="text" id="username" name="username" required
+                    class="w-full bg-black/40 border border-white/20 rounded-sm px-4 py-3 text-white font-jetbrains focus:border-dark-yellow focus:outline-none transition-colors"
+                />
+            </div>
+            <div>
+                <label for="password" class="block font-jetbrains text-white/80 text-sm mb-2">Password</label>
+                <input type="password" id="password" name="password" required
+                    class="w-full bg-black/40 border border-white/20 rounded-sm px-4 py-3 text-white font-jetbrains focus:border-dark-yellow focus:outline-none transition-colors"
+                />
+            </div>
+            <div id="error-message" class="text-red-500 font-jetbrains text-xs min-h-5 text-center"></div>
+            
+            <button type="submit" 
+                class="w-full py-4 bg-linear-to-r from-light-yellow to-dark-yellow text-dark-green font-chela font-bold text-xl rounded-sm hover:scale-[1.02] active:scale-95 transition-transform duration-200">
+                SIGN IN
+            </button>
+        </form>
+
+        <!-- Initial Setup Link (Hidden if admin exists) -->
+        <div id="setup-container" class="mt-6 text-center border-t border-white/10 pt-4 hidden">
+            <p class="font-jetbrains text-white/40 text-[10px] mb-2">No account found?</p>
+            <button id="setup-btn" class="text-light-yellow font-jetbrains text-xs hover:underline uppercase tracking-tighter">Initialize First Admin</button>
+        </div>
+    </div>
+
+    <script src="/scripts/dist/admin.js"></script>
+    <script src="/scripts/dist/transitions.js"></script>
+</body>
+</html>

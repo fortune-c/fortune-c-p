@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bitcount+Ink:wght@100..900&family=Chela+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles/output.css" />
-  <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
+  <link rel="stylesheet" href="/styles/output.css" />
+  <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
 </head>
 
 <body class="bg-dark-green h-screen flex flex-col items-center justify-center overflow-hidden py-5 px-3">
@@ -20,23 +20,23 @@
 
     <!-- Gradient Overlay -->
     <div
-      class="absolute inset-0 bg-gradient-to-t from-dark-green/90 via-dark-green/50 to-dark-green/90 mix-blend-multiply pointer-events-none">
+      class="absolute inset-0 bg-linear-to-t from-dark-green/90 via-dark-green/50 to-dark-green/90 mix-blend-multiply pointer-events-none">
     </div>
 
     <!-- Navigation -->
-    <nav class="relative z-10 my-3 mx-7 max-sm:m-4 flex flex-row items-center">
-      <a href="./index.html">
-        <img src="../assets/logo.png" alt="fortune-c logo" class="w-8 h-8 max-sm:w-8 max-sm:h-8" />
+    <nav class="relative z-10 my-3 mx-7 max-sm:m-4 flex flex-row items-center" data-animate>
+      <a href="/">
+        <img src="/assets/logo.png" alt="fortune-c logo" class="w-8 h-8 max-sm:w-8 max-sm:h-8" />
       </a>
       <ul class="flex flex-row gap-10 max-sm:gap-5 mx-auto text-white font-chela font-bold text-lg max-sm:text-sm">
         <li>
-          <a href="./about.html" class="hover:text-light-yellow transition-colors duration-200">About Me</a>
+          <a href="/about" class="hover:text-light-yellow transition-colors duration-200">About Me</a>
         </li>
         <li>
-          <a href="./project.html" class="hover:text-light-yellow transition-colors duration-200">Project</a>
+          <a href="/projects" class="hover:text-light-yellow transition-colors duration-200">Project</a>
         </li>
         <li>
-          <a href="./contact.html"
+          <a href="/contact"
             class="hover:text-light-yellow transition-colors duration-200 text-light-yellow">Contact</a>
         </li>
       </ul>
@@ -54,17 +54,17 @@
       <!-- Center Typography Section -->
       <div class="flex flex-row items-center gap-10 max-md:flex-col max-md:gap-4 text-center md:text-left">
         <!-- Get In Touch -->
-        <div class="flex flex-col">
+        <div class="flex flex-col" data-animate>
           <h1 class="font-chela text-7xl max-xl:text-6xl max-lg:text-5xl max-sm:text-4xl text-white leading-[100%] tracking-[0.15em] capitalize">
             Get In<br />Touch
           </h1>
         </div>
 
         <!-- Divider Line (horizontal on desktop, hidden on mobile) -->
-        <div class="h-0.5 w-32 lg:w-48 bg-dark-yellow/50 max-md:hidden"></div>
+        <div class="h-0.5 w-32 lg:w-48 bg-dark-yellow/50 max-md:hidden" data-animate></div>
 
         <!-- Discuss A Project -->
-        <div class="flex flex-col">
+        <div class="flex flex-col" data-animate>
           <h2 class="font-poppins font-extralight text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-xl text-white leading-relaxed uppercase tracking-[0.2em]">
             Discuss A<br />Project
           </h2>
@@ -72,7 +72,7 @@
       </div>
 
       <!-- Social Icons Section -->
-      <div class="flex items-center justify-center mt-8 max-sm:mt-5">
+      <div class="flex items-center justify-center mt-8 max-sm:mt-5" data-animate>
         <!-- Social Icons -->
         <div class="flex flex-row justify-center gap-2 max-sm:gap-1 items-center">
               <!-- GitHub -->
@@ -368,7 +368,7 @@
 
   </div>
 
-  <script src="../scripts/projects.js"></script>
+  <script src="/scripts/dist/transitions.js"></script>
 </body>
 
 </html>
