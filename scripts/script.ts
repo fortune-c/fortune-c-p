@@ -13,10 +13,7 @@ interface Project {
     order?: number;
 }
 
-const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-const API_URL = IS_LOCAL 
-    ? 'http://localhost:5001/api/projects' 
-    : 'https://fortune-c-p-api.onrender.com/api/projects';
+const API_URL = 'https://fortune-c-p-api.onrender.com/api/projects';
 
 // Local Fallback Data (used only if backend is unreachable)
 const localFallbackProjects: Project[] = [
