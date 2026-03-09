@@ -1,147 +1,97 @@
 # 🌐 fortune-c | Personal Portfolio
 
-A modern, highly interactive **developer portfolio** built to showcase my projects, skills, and experience.
+A modern, highly interactive **developer portfolio** built to showcase my projects, skills, and experience. 
 Designed with a focus on aesthetics, smooth animations, and full responsiveness across all devices.
 
-It includes a **public-facing portfolio website** and a planned **C# / ASP.NET Core admin panel** for managing portfolio content dynamically.
+It features a **monorepo architecture** containing a public-facing portfolio website and a fully operational **C# / ASP.NET Core admin panel** for managing content dynamically via a real-time database.
 
 ---
 
 ## 🚀 Tech Stack
 
-### Frontend
+### Frontend (Portfolio & Admin)
+*   **HTML5 & TypeScript** — Semantic structure with type-safe scripting
+*   **Tailwind CSS v4** — Utility-first styling with custom theme tokens
+*   **Vanilla CSS** — Custom animations (crossfade, dust particles, page transitions)
 
-* **HTML5** — Semantic page structure
-* **Tailwind CSS v4** — Utility-first styling with custom theme tokens
-* **TypeScript** — Type-safe scripting compiled to JS
-* **Vanilla CSS** — Custom animations (crossfade, dust particles, page transitions)
+### Backend (Admin API)
+*   **C# / ASP.NET Core (net10.0)** — REST API following modern practices
+*   **MongoDB Atlas** — NoSQL database for flexible data management
+*   **JWT Authentication** — Secure token-based access for the admin dashboard
+*   **Docker** — Containerized deployment for consistent environments
 
-### Backend (Admin Panel — Planned)
-
-* **C# / ASP.NET Core** — REST API for managing portfolio content
-* **Entity Framework Core** — ORM for database access
-* **SQL Server / PostgreSQL** — Persistent data storage
-* **JWT Authentication** — Secure admin access
-
-### Fonts & Assets
-
-* **Porter Sans Block** — Local custom font for headings
-* **Chela One** — Google Fonts, navigation & display text
-* **JetBrains Mono** — Monospace body/code text
-* **Bitcount Ink** — Decorative display use
-* **Poppins** — Secondary display font
-
-### Development Tools
-
-* **Git & GitHub** — Version control
-* **npm** — Dependency management & build scripts
-* **tsc** — TypeScript compiler
+### Infrastructure
+*   **Vercel** — Automated frontend deployment
+*   **Render** — Container-based backend hosting (Docker)
 
 ---
 
 ## ✨ Features
 
-* 🎨 **Premium UI Design** — Dark green palette, golden accents, glassmorphism
-* 📱 **Fully Responsive** — Mobile, tablet, and desktop layouts
-* 🎞️ **Page Transition Animations** — Smooth dark fade between all pages
-* 🖼️ **Staggered Entrance Animations** — Content fades and slides in on load
-* 🧩 **Interactive Project Gallery** — Click thumbnails to switch between projects
-* 🎭 **ASCII Art Avatar** — Animated crossfade with dust particle effects (About page)
-* 📬 **Contact Section** — Social media links with hover effects
-* ⚡ **Fast & Lightweight** — No heavy frameworks, pure HTML/CSS/TS
-* 🔐 **Admin Panel** — C# / ASP.NET Core REST API for dynamic content management
-* 📝 **Dynamic Content** — Manage projects, bio, and links via an authenticated dashboard
+*   🎨 **Premium UI Design** — Dark green palette, golden accents, and glassmorphism
+*   📱 **Fully Responsive** — Seamless transitions between mobile, tablet, and desktop
+*   🎞️ **Page Transitions** — Smooth interactive dark fade between all pages
+*   🧩 **Dynamic Project Gallery** — Interactive thumbnails synchronized with the MongoDB collection
+*   🎭 **ASCII Art Avatar** — Animated character with dust effects on the About page
+*   🔐 **Secure Admin Panel** — Authenticated dashboard for real-time bio and project updates
+*   🔄 **Cross-Page Sync** — Social media links are managed in one place and updated across the whole site automatically
 
 ---
 
 ## 📂 Project Structure
 
 ```
-├── admin/               # Admin Panel
-│   ├── frontend/        # Admin UI (Login & Dashboard)
-│   └── backend/         # C# / ASP.NET Core Solution
-│       └── backend/     # Core API Project
-│           ├── Controllers/ 
-│           ├── Models/      
-│           ├── Services/    
-│           └── Program.cs   
+├── admin/               # Admin Portal
+│   ├── frontend/        # Dashboard & Login UI
+│   └── backend/         # ASP.NET Core monorepo entry
+│       ├── backend/     # Core Business Logic
+│       │   ├── Controllers/ # API Endpoints (Projects, About, Auth)
+│       │   ├── Models/      # MongoDB Schema & DTOs
+│       │   ├── Services/    # Data persistence & Business Logic
+│       │   └── Program.cs   # API Configuration & CORS
+│       └── Dockerfile   # Container configuration for Render
 │
-├── assets/              # Images, SVGs, fonts, icons
-│   ├── ascii-me/        # ASCII avatar animation frames + dust particles
-│   └── fonts/           # Local font files
-│
-├── structure/           # Public HTML pages
-│   ├── index.html       # Home / landing page
-│   ├── about.html       # About me page
-│   ├── project.html     # Project gallery page
-│   └── contact.html     # Contact page
-│
-├── scripts/             # TypeScript source files
-│   ├── script.ts        # Project gallery logic
-│   ├── admin.ts         # Admin panel logic
-│   ├── transitions.ts   # Page transition engine
-│   └── dist/            # Compiled JS output
-│
-├── styles/
-│   ├── input.css        # Tailwind source + tokens
-│   └── output.css       # Compiled CSS
-│
-├── pyscript/
-│   └── generate_ascii.py # ASCII generation script
-│
-├── package.json
-├── tsconfig.json
+├── assets/              # Static assets (Images, SVGs, Fonts)
+├── structure/           # Public Portfolio HTML pages
+├── scripts/             # TypeScript source & compiled JS output
+├── styles/              # Tailwind and custom CSS tokens
+├── package.json         # Main project dependencies
 └── README.md
 ```
 
 ---
 
-## 🖥️ Installation & Setup
+## 🖥️ Local Development
 
-Clone the repository:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/fortune-c/fortune-c-p.git
+    cd fortune-c-p
+    ```
 
-```bash
-git clone https://github.com/fortune-c/fortune-c-p.git
-```
+2.  **Install Frontend Dependencies:**
+    ```bash
+    npm install
+    ```
 
-Navigate into the project folder:
+3.  **Run Dev Watchers (UI):**
+    ```bash
+    npm run dev
+    ```
 
-```bash
-cd fortune-c-p
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the development watchers (CSS + TypeScript in parallel):
-
-```bash
-npm run dev
-```
-
-> This runs `tailwindcss --watch` and `tsc --watch` concurrently.
-
-To build once without watching:
-
-```bash
-npm run build:css   # Compile Tailwind CSS
-npx tsc             # Compile TypeScript
-```
+4.  **Launch Backend (Requires .NET 10 SDK):**
+    ```bash
+    cd admin/backend/backend
+    dotnet run
+    ```
+    *Note: Ensure you have your MongoDB connection string in a local `appsettings.json` or as an environment variable.*
 
 ---
 
-## 📸 Screenshots
+## 🌍 Live Project
 
-*Screenshots coming soon.*
-
----
-
-## 🌍 Live Demo
-
-Coming soon.
+*   **Portfolio Website:** [fortune-c.vercel.app](https://fortune-c.vercel.app/)
+*   **API Base:** [fortune-c-p-api.onrender.com](https://fortune-c-p-api.onrender.com/health)
 
 ---
 
@@ -149,10 +99,9 @@ Coming soon.
 
 If you'd like to collaborate or connect:
 
-* GitHub: [fortune-c](https://github.com/fortune-c)
+*   GitHub: [fortune-c](https://github.com/fortune-c)
 
 ---
 
 ⭐ If you like this project, consider giving it a star!
 
----
