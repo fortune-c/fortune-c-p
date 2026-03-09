@@ -22,6 +22,47 @@
     <main class="max-w-7xl mx-auto p-10 max-sm:p-4">
         <header class="flex flex-row justify-between items-end mb-12">
             <div>
+                <h2 class="font-jetbrains font-bold text-3xl uppercase tracking-widest text-white">About Me Settings</h2>
+                <div class="h-1 w-20 bg-dark-yellow mt-2"></div>
+            </div>
+            <button id="save-about-btn" class="bg-dark-yellow text-dark-green px-6 py-3 font-chela font-bold text-lg rounded-sm hover:scale-105 active:scale-95 transition-transform">
+                SAVE INFO
+            </button>
+        </header>
+
+        <section class="mb-20 bg-black/20 p-8 rounded-sm border border-white/10">
+            <form id="about-form" class="space-y-6">
+                <div>
+                    <label class="block font-jetbrains text-xs text-white/50 mb-2 uppercase">Your Bio (Use double newline for paragraphs)</label>
+                    <textarea id="about-bio" name="bio" rows="6" class="w-full bg-black/40 border border-white/20 rounded-sm px-4 py-3 text-white font-jetbrains focus:border-dark-yellow focus:outline-none resize-none" placeholder="Write your story here..."></textarea>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block font-jetbrains text-xs text-white/50 mb-2 uppercase">GitHub URL</label>
+                        <input type="url" id="social-github" class="w-full bg-black/40 border border-white/20 rounded-sm px-4 py-2 text-white font-jetbrains focus:border-dark-yellow focus:outline-none text-sm" />
+                    </div>
+                    <div>
+                        <label class="block font-jetbrains text-xs text-white/50 mb-2 uppercase">LinkedIn URL</label>
+                        <input type="url" id="social-linkedin" class="w-full bg-black/40 border border-white/20 rounded-sm px-4 py-2 text-white font-jetbrains focus:border-dark-yellow focus:outline-none text-sm" />
+                    </div>
+                    <div>
+                        <label class="block font-jetbrains text-xs text-white/50 mb-2 uppercase">Instagram URL</label>
+                        <input type="url" id="social-instagram" class="w-full bg-black/40 border border-white/20 rounded-sm px-4 py-2 text-white font-jetbrains focus:border-dark-yellow focus:outline-none text-sm" />
+                    </div>
+                    <div>
+                        <label class="block font-jetbrains text-xs text-white/50 mb-2 uppercase">Dribbble URL</label>
+                        <input type="url" id="social-dribbble" class="w-full bg-black/40 border border-white/20 rounded-sm px-4 py-2 text-white font-jetbrains focus:border-dark-yellow focus:outline-none text-sm" />
+                    </div>
+                    <div>
+                        <label class="block font-jetbrains text-xs text-white/50 mb-2 uppercase">Behance URL</label>
+                        <input type="url" id="social-behance" class="w-full bg-black/40 border border-white/20 rounded-sm px-4 py-2 text-white font-jetbrains focus:border-dark-yellow focus:outline-none text-sm" />
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <header class="flex flex-row justify-between items-end mb-12">
+            <div>
                 <h2 class="font-jetbrains font-bold text-3xl uppercase tracking-widest text-white">Project Management</h2>
                 <div class="h-1 w-20 bg-dark-yellow mt-2"></div>
             </div>

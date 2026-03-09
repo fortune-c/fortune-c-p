@@ -15,6 +15,7 @@ const ADMIN_API_BASE = 'https://fortune-c-p-api.onrender.com/api';
 
 const AUTH_URL = `${ADMIN_API_BASE}/auth`;
 const PROJECTS_URL = `${ADMIN_API_BASE}/projects`;
+const ABOUT_URL = `${ADMIN_API_BASE}/about`;
 
 // ── UTILITIES ──────────────────────────────────────────────────────────
 const getToken = () => localStorage.getItem('fortune_token');
@@ -214,6 +215,9 @@ document.addEventListener('DOMContentLoaded', () => {
             removeToken();
             window.location.href = '/admin/login';
         });
+
+        loadAboutInfo();
+        document.getElementById('save-about-btn')?.addEventListener('click', saveAboutInfo);
         
         form?.addEventListener('submit', handleProjectSubmit);
     } else {
@@ -278,3 +282,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+async function loadAboutInfo() {
+    try {
+        const resp = await fetch(ABOUT_URL);
+        if (resp.ok) {
+            const data = await resp.json();
+            const bioField = document.getElementById('about-bio') as HTMLTextAreaElement;
+            if (bioField) bioField.value = data.bio || '';
+            
+            const gitHubField = document.getElementById('social-github') as HTMLInputElement;
+            if (gitHubField) gitHubField.value = data.socials?.gitHub || '';
+            
+            const linkedInField = document.getElementById('social-linkedin') as HTMLInputElement;
+            if (linkedInField) linkedInField.value = data.socials?.linkedIn || '';
+            
+            const instagramField = document.getElementById('social-instagram') as HTMLInputElement;
+            if (instagramField) instagramField.value = data.socials?.instagram || '';
+            
+            const dribbbleField = document.getElementById('social-dribbble') as HTMLInputElement;
+            if (dribbbleField) dribbbleField.value = data.socials?.dribbble || '';
+            
+            const behanceField = document.getElementById('social-behance') as HTMLInputElement;
+            if (behanceField) behanceField.value = data.socials?.behance || '';
+        }
+    } catch (err) {
+        console.error('Failed to load about info:', err);
+    }
+}
+
+async function saveAboutInfo() {
+    const btn = document.getElementById('save-about-btn') as HTMLButtonElement;
+    if (!btn) return;
+
+    const originalText = btn.textContent;
+    btn.textContent = 'SAVING...';
+    btn.disabled = true;
+
+    const info = {
+        bio: (document.getElementById('about-bio') as HTMLTextAreaElement).value,
+        socials: {
+            gitHub: (document.getElementById('social-github') as HTMLInputElement).value,
+            linkedIn: (document.getElementById('social-linkedin') as HTMLInputElement).value,
+            instagram: (document.getElementById('social-instagram') as HTMLInputElement).value,
+            dribbble: (document.getElementById('social-dribbble') as HTMLInputElement).value,
+            behance: (document.getElementById('social-behance') as HTMLInputElement).value
+        }
+    };
+
+    try {
+        const resp = await fetch(ABOUT_URL, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${getToken()}`
+            },
+            body: JSON.stringify(info)
+        });
+
+        if (resp.ok) {
+            alert('About information updated successfully!');
+        } else {
+            alert('Failed to update about information.');
+        }
+    } catch (err) {
+        console.error('Error saving about info:', err);
+        alert('Error connecting to server.');
+    } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
+    }
+}

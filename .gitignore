@@ -147,9 +147,7 @@ vite.config.ts.timestamp-*
 public/
 
 #backend
-admin/backend
-backend/
-backend/backend/bin
-backend/backend/obj
-backend/backend/appsettings.json
-backend/backend/appsettings.Development.json
+admin/backend/backend/bin
+admin/backend/backend/obj
+admin/backend/backend/appsettings.json
+admin/backend/backend/appsettings.Development.json
