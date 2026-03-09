@@ -1,5 +1,3 @@
-export {};
-
 interface Project {
     id?: string;
     title: string;
@@ -13,10 +11,10 @@ interface Project {
     order?: number;
 }
 
-const API_BASE = 'https://fortune-c-p-api.onrender.com/api';
+const ADMIN_API_BASE = 'https://fortune-c-p-api.onrender.com/api';
 
-const AUTH_URL = `${API_BASE}/auth`;
-const PROJECTS_URL = `${API_BASE}/projects`;
+const AUTH_URL = `${ADMIN_API_BASE}/auth`;
+const PROJECTS_URL = `${ADMIN_API_BASE}/projects`;
 
 // ── UTILITIES ──────────────────────────────────────────────────────────
 const getToken = () => localStorage.getItem('fortune_token');
