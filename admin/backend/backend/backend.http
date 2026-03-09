@@ -1,0 +1,57 @@
+@backend_HostAddress = http://localhost:5000
+
+### 1. Health Check
+GET {{backend_HostAddress}}/health
+Accept: application/json
+
+### 2. First-Time Setup (Seed Admin)
+# Use this ONCE to create your admin account.
+POST {{backend_HostAddress}}/api/auth/setup
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "CHANGE_ME_PASSWORD"
+}
+
+### 3. Login
+# @name login
+POST {{backend_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "CHANGE_ME_PASSWORD"
+}
+
+### Capture Token
+@authToken = {{login.response.body.token}}
+
+### 4. Verify Me (Auth Check)
+GET {{backend_HostAddress}}/api/auth/me
+Authorization: Bearer {{authToken}}
+
+### 5. Create a Project (Admin Only)
+POST {{backend_HostAddress}}/api/projects
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "title": "CivicVotes",
+    "subtitle": "Election & Voting Management System",
+    "description": "CivicVotes is a production-ready Election & Voting Management System built with ASP.NET Core Web API.",
+    "github": "https://github.com/fortune-c/civicvote",
+    "live": "#",
+    "imageUrl": "url('../assets/projects-preview/CivicVotes.png')",
+    "tags": ["ASP.NET Core", "Web API", "SQL Server"],
+    "featured": true,
+    "order": 1
+}
+
+### 6. Get All Projects (Public)
+GET {{backend_HostAddress}}/api/projects
+Accept: application/json
+
+### 7. Get Featured Projects
+GET {{backend_HostAddress}}/api/projects/featured
+Accept: application/json
