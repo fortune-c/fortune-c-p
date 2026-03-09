@@ -19,7 +19,7 @@
     </header>
 
     <!-- Name & Title -->
-    <div class="flex flex-col items-center mt-2 max-sm:mt-3">
+    <div class="flex flex-col items-center mt-6 max-sm:mt-12 mb-4 max-sm:px-2">
       <h1
         class="font-porter text-[48px] max-lg:text-[36px] max-md:text-[28px] max-sm:text-[20px] uppercase tracking-[24.2%] leading-[100%]"
         style="background: linear-gradient(to right, rgba(251, 208, 80, 1), rgba(241, 180, 33, 1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
@@ -36,14 +36,16 @@
     <!-- Hero Image + CTA Arrow -->
     <div class="flex flex-col items-center flex-1 justify-center max-sm:justify-start max-sm:mt-2">
       <img src="/assets/hero.svg" alt="3D character illustration"
-        class="w-[600px] h-[600px] max-lg:w-[450px] max-lg:h-[450px] max-md:w-[350px] max-md:h-[350px] max-sm:w-[280px] max-sm:h-[280px]"
+        class="w-[500px] h-auto max-lg:w-[400px] max-md:w-[350px] max-sm:w-[200px]"
         data-animate />
-      <a href="/about"
-        class="relative mt-[-140px] max-lg:mt-[-110px] max-md:mt-[-90px] max-sm:mt-[-80px] hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer z-10"
-        data-animate>
-        <img src="/assets/slide-next.svg" alt="Go to About page"
-          class="w-[100px] h-[95px] max-md:w-[80px] max-md:h-[76px] max-sm:w-[60px] max-sm:h-[57px]" />
-      </a>
+      <div class="flex flex-col items-center mt-[2px] max-lg:mt-[-5px] max-md:mt-0 max-sm:mt-2 z-10" data-animate>
+        <span class="font-jetbrains font-normal text-[11px] max-sm:text-[9px] text-white tracking-[0.4em] mb-4 uppercase">Touch to explore</span>
+        <a href="/about"
+          class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer">
+          <img src="/assets/slide-next.svg" alt="Go to About page"
+            class="w-[100px] h-[95px] max-md:w-[80px] max-md:h-[76px] max-sm:w-[60px] max-sm:h-[57px]" />
+        </a>
+      </div>
     </div>
   </div>
   <script src="/scripts/dist/transitions.js"></script>
