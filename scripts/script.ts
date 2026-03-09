@@ -1,5 +1,3 @@
-export {};
-
 interface Project {
     id?: string;
     title: string;
@@ -13,11 +11,11 @@ interface Project {
     order?: number;
 }
 
-const API_URL = 'https://fortune-c-p-api.onrender.com/api/projects';
+const PROJECTS_API_URL = 'https://fortune-c-p-api.onrender.com/api/projects';
 
 async function fetchProjects(): Promise<Project[]> {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(PROJECTS_API_URL);
         if (!response.ok) throw new Error('Network response was not ok');
         return await response.json();
     } catch (error) {
