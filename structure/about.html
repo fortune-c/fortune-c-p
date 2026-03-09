@@ -44,37 +44,10 @@
           <!-- Middle Section: Text & Animated Images -->
           <div class="flex flex-row justify-between items-center flex-1 min-h-0">
             <!-- Text Content -->
-            <div class="max-w-[50%] mb-4 max-lg:max-w-[60%] max-md:max-w-full max-sm:mt-2" data-animate>
-              <p
-                class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider">
-                <strong class="text-white font-bold">Fortunate Adesina</strong>
-                is an aspiring backend engineer with a strong interest in building scalable, efficient, 
-                and reliable software systems. With a solid foundation in server-side development, 
-                databases, and system design, Fortunate is passionate about learning how robust backend 
-                infrastructures power modern applications.
-              </p>
-
-              <p
-                class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider mt-4 max-sm:mt-3 ml-6 max-sm:ml-2">
-                As a developer focused on backend technologies, 
-                I enjoy designing and building the systems 
-                that power applications behind the scenes. 
-                With an interest in server-side development, 
-                APIs, and database management, I focus 
-                on creating reliable, efficient, and scalable backend solutions.
-              </p>
-
-              <p
-                class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider mt-4 max-sm:mt-3">
-                Currently seeking a Backend Engineering Internship, 
-                I am eager to contribute to real-world projects, 
-                collaborate with experienced engineers, 
-                and deepen knowledge of backend architecture, 
-                APIs, and performance optimization. 
-                Driven by curiosity and continuous learning, 
-                I am committed to writing clean, maintainable code 
-                and building technology that is both functional and impactful.
-              </p>
+            <div id="about-content" class="max-w-[50%] mb-4 max-lg:max-w-[60%] max-md:max-w-full max-sm:mt-2" data-animate>
+               <p class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider italic opacity-50">
+                 Loading bio...
+               </p>
             </div>
 
             <!-- Ascii Avatar Animation -->
@@ -112,8 +85,8 @@
             <!-- Social Icons -->
             <div class="flex flex-row gap-2 max-sm:gap-1 items-center">
               <!-- GitHub -->
-              <a href="https://github.com/fortune-c" target="_blank" rel="noopener noreferrer"
-                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+              <a id="link-github" href="#" target="_blank" rel="noopener noreferrer"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="GitHub">
                 <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5608)">
@@ -163,8 +136,8 @@
               </a>
 
               <!-- LinkedIn -->
-              <a href="https://linkedin.com/in/fortune-c" target="_blank" rel="noopener noreferrer"
-                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+              <a id="link-linkedin" href="#" target="_blank" rel="noopener noreferrer"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="LinkedIn">
                 <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5598)">
@@ -218,8 +191,8 @@
               </a>
 
               <!-- Instagram -->
-              <a href="https://instagram.com/fortune_c" target="_blank" rel="noopener noreferrer"
-                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+              <a id="link-instagram" href="#" target="_blank" rel="noopener noreferrer"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Instagram">
                 <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5612)">
@@ -273,8 +246,8 @@
               </a>
 
               <!-- Dribbble -->
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+              <a id="link-dribbble" href="#" target="_blank" rel="noopener noreferrer"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Dribbble">
                 <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5602)">
@@ -329,8 +302,8 @@
               </a>
 
               <!-- Behance -->
-              <a href="#"
-                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer"
+              <a id="link-behance" href="#"
+                class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Behance">
                 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5616)">
@@ -405,6 +378,7 @@
       </div>
     </div>
   </div>
+  <script src="/scripts/dist/about.js"></script>
   <script src="/scripts/dist/transitions.js"></script>
 </body>
 
