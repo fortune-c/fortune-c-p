@@ -15,43 +15,14 @@ interface Project {
 
 const API_URL = 'https://fortune-c-p-api.onrender.com/api/projects';
 
-// Local Fallback Data (used only if backend is unreachable)
-const localFallbackProjects: Project[] = [
-    {
-        title: "CivicVotes",
-        subtitle: "Election & Voting Management System",
-        description: "CivicVotes is a production-ready Election & Voting Management System built with ASP.NET Core Web API. It provides comprehensive features for managing elections, candidates, and secure voting with role-based access control.",
-        github: "https://github.com/fortune-c/civicvote",
-        live: "#",
-        imageUrl: "../assets/projects-preview/CivicVotes.png"
-    },
-    {
-        title: "PORTFOLIO",
-        subtitle: "Personal Website",
-        description: "A modern developer portfolio website built to showcase my projects, skills, and experience. The site is designed with performance, responsiveness, and maintainability in mind.",
-        github: "https://github.com/fortune-c/fortune-c-p",
-        live: "#",
-        imageUrl: "../assets/projects-preview/portfolio.png"
-    },
-    {
-        title: "Netus",
-        subtitle: "C Networking Project",
-        description: "Netus is a minimal HTTP server written from scratch in C, implementing core components directly on top of POSIX sockets to explore low-level networking.",
-        github: "https://github.com/fortune-c/netus",
-        live: "#",
-        imageUrl: "../assets/projects-preview/Netus.png"
-    }
-];
-
 async function fetchProjects(): Promise<Project[]> {
     try {
         const response = await fetch(API_URL);
         if (!response.ok) throw new Error('Network response was not ok');
-        const data = await response.json();
-        return data.length > 0 ? data : localFallbackProjects;
+        return await response.json();
     } catch (error) {
-        console.warn('Backend fetch failed, using local fallback:', error);
-        return localFallbackProjects;
+        console.error('Backend fetch failed:', error);
+        return [];
     }
 }
 
@@ -69,6 +40,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Clear and fetch projects
     thumbnailsContainer.innerHTML = '';
     const projects = await fetchProjects();
+    
+    if (projects.length === 0) {
+        thumbnailsContainer.innerHTML = '<div class="col-span-full py-10 text-center font-jetbrains text-white/40 italic">No projects found in database.</div>';
+        const mainTitle = document.getElementById('project-title');
+        if (mainTitle) mainTitle.textContent = "Gallery Empty";
+        return;
+    }
 
     // Create thumbnails dynamically
     const thumbnailElements: HTMLElement[] = [];
