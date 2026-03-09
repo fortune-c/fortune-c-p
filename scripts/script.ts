@@ -1,3 +1,5 @@
+export {};
+
 interface Project {
     id?: string;
     title: string;
@@ -11,7 +13,7 @@ interface Project {
     order?: number;
 }
 
-const API_URL = 'http://localhost:5001/api/projects';
+const API_URL = 'https://fortune-c-p-api.onrender.com/api/projects';
 
 // Local Fallback Data (used only if backend is unreachable)
 const localFallbackProjects: Project[] = [
