@@ -11,25 +11,18 @@
   <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
 </head>
 
-<body class="bg-dark-green h-screen flex flex-col items-center justify-center overflow-hidden py-5 px-3">
+<body class="bg-dark-green min-h-screen flex flex-col items-center justify-center overflow-y-auto py-5 px-3">
   <div
-    class="bg-[url(../assets/nature-bg.svg)] bg-cover bg-center w-full h-full max-sm:w-full max-sm:h-screen flex flex-col border border-dark-yellow rounded-xl">
+    class="bg-[url(../assets/nature-bg.svg)] bg-cover bg-center w-full min-h-full max-sm:w-full max-sm:min-h-screen flex flex-col border border-dark-yellow rounded-xl overflow-y-auto">
     <!-- Navigation -->
-    <nav class="m-7 max-sm:m-4 flex flex-row items-center" data-animate>
+    <nav class="m-7 max-sm:my-8 max-sm:mx-4 flex flex-row items-center justify-between" data-animate>
       <a href="/">
-        <img src="/assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-8 max-sm:h-8" />
+        <img src="/assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-10 max-sm:h-12" />
       </a>
-      <ul class="flex flex-row gap-10 max-sm:gap-5 mx-auto text-white font-chela font-bold text-lg max-sm:text-sm">
-        <li>
-          <a href="/about" class="hover:text-light-yellow transition-colors duration-200 text-light-yellow">About
-            Me</a>
-        </li>
-        <li>
-          <a href="/projects" class="hover:text-light-yellow transition-colors duration-200">Project</a>
-        </li>
-        <li>
-          <a href="/contact" class="hover:text-light-yellow transition-colors duration-200">Contact</a>
-        </li>
+      <ul class="flex flex-row gap-8 max-sm:gap-4 text-white font-chela font-bold text-lg max-sm:text-[15px]">
+        <li><a href="/about" class="text-light-yellow">About Me</a></li>
+        <li><a href="/projects" class="hover:text-light-yellow transition-colors">Project</a></li>
+        <li><a href="/contact" class="hover:text-light-yellow transition-colors">Contact</a></li>
       </ul>
     </nav>
 
@@ -44,8 +37,8 @@
           <!-- Middle Section: Text & Animated Images -->
           <div class="flex flex-row justify-between items-center flex-1 min-h-0">
             <!-- Text Content -->
-            <div id="about-content" class="max-w-[50%] mb-4 max-lg:max-w-[60%] max-md:max-w-full max-sm:mt-2" data-animate>
-               <p class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider italic opacity-50">
+            <div id="about-content" class="max-w-[50%] mb-4 max-lg:max-w-[60%] max-md:max-w-full max-sm:mt-2 max-sm:px-4" data-animate>
+               <p id="about-bio" class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[14px] leading-relaxed max-sm:leading-loose text-white/90 text-justify opacity-80">
                  Loading bio...
                </p>
             </div>
@@ -88,7 +81,7 @@
               <a id="link-github" href="#" target="_blank" rel="noopener noreferrer"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="GitHub">
-                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" max-sm:width="60" max-sm:height="60" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5608)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5608)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />
@@ -139,7 +132,7 @@
               <a id="link-linkedin" href="#" target="_blank" rel="noopener noreferrer"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="LinkedIn">
-                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" max-sm:width="60" max-sm:height="60" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5598)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5598)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />
@@ -194,7 +187,7 @@
               <a id="link-instagram" href="#" target="_blank" rel="noopener noreferrer"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Instagram">
-                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" max-sm:width="60" max-sm:height="60" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5612)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5612)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />
@@ -249,7 +242,7 @@
               <a id="link-dribbble" href="#" target="_blank" rel="noopener noreferrer"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Dribbble">
-                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" max-sm:width="60" max-sm:height="60" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5602)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5602)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />
@@ -305,7 +298,7 @@
               <a id="link-behance" href="#"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Behance">
-                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="54" height="54" max-sm:width="64" max-sm:height="64" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5616)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5616)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />

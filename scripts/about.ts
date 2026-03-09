@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const marginClass = index === 1 ? 'mt-4 max-sm:mt-3 ml-6 max-sm:ml-2' : 
                                (index > 1 ? 'mt-4 max-sm:mt-3' : '');
             
-            return `<p class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[11px] leading-[1.7] text-white/90 tracking-wider ${marginClass}">${p}</p>`;
+            return `<p class="font-jetbrains text-[13px] max-lg:text-[12px] max-sm:text-[14px] leading-relaxed max-sm:leading-loose text-white/90 ${marginClass}">${p}</p>`;
         }).join('');
     }
 

@@ -13,10 +13,10 @@
   <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
 </head>
 
-<body class="bg-dark-green h-screen flex flex-col items-center justify-center overflow-hidden py-5 px-3">
+<body class="bg-dark-green min-h-screen flex flex-col items-center justify-center overflow-y-auto py-5 px-3">
   <!-- Content Container with Image Background -->
   <div
-    class="relative w-full h-full bg-[url(../assets/nature-bg.svg)] bg-cover bg-center rounded-sm overflow-hidden flex flex-col max-sm:h-[95vh] shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]">
+    class="relative w-full min-h-full bg-[url(../assets/nature-bg.svg)] bg-cover bg-center rounded-sm overflow-y-auto flex flex-col max-sm:min-h-[95vh] shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]">
 
     <!-- Gradient Overlay -->
     <div
@@ -24,21 +24,14 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="relative z-10 my-3 mx-7 max-sm:m-4 flex flex-row items-center" data-animate>
+    <nav class="relative z-10 m-7 max-sm:my-8 max-sm:mx-4 flex flex-row items-center justify-between" data-animate>
       <a href="/">
-        <img src="/assets/logo.png" alt="fortune-c logo" class="w-8 h-8 max-sm:w-8 max-sm:h-8" />
+        <img src="/assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-10 max-sm:h-12" />
       </a>
-      <ul class="flex flex-row gap-10 max-sm:gap-5 mx-auto text-white font-chela font-bold text-lg max-sm:text-sm">
-        <li>
-          <a href="/about" class="hover:text-light-yellow transition-colors duration-200">About Me</a>
-        </li>
-        <li>
-          <a href="/projects" class="hover:text-light-yellow transition-colors duration-200">Project</a>
-        </li>
-        <li>
-          <a href="/contact"
-            class="hover:text-light-yellow transition-colors duration-200 text-light-yellow">Contact</a>
-        </li>
+      <ul class="flex flex-row gap-8 max-sm:gap-4 text-white font-chela font-bold text-lg max-sm:text-[15px]">
+        <li><a href="/about" class="hover:text-light-yellow transition-colors duration-200">About Me</a></li>
+        <li><a href="/projects" class="hover:text-light-yellow transition-colors duration-200">Project</a></li>
+        <li><a href="/contact" class="text-light-yellow">Contact</a></li>
       </ul>
     </nav>
 
@@ -52,20 +45,20 @@
       </div>
 
       <!-- Center Typography Section -->
-      <div class="flex flex-row items-center gap-10 max-md:flex-col max-md:gap-4 text-center md:text-left">
+      <div class="flex flex-row items-center gap-10 max-md:flex-col max-md:gap-4 text-center md:text-left py-10">
         <!-- Get In Touch -->
         <div class="flex flex-col" data-animate>
-          <h1 class="font-chela text-7xl max-xl:text-6xl max-lg:text-5xl max-sm:text-4xl text-white leading-[100%] tracking-[0.15em] capitalize">
+          <h1 class="font-chela text-8xl max-xl:text-7xl max-lg:text-6xl max-sm:text-5xl text-white leading-[100%] tracking-widest uppercase">
             Get In<br />Touch
           </h1>
         </div>
 
         <!-- Divider Line (horizontal on desktop, hidden on mobile) -->
-        <div class="h-0.5 w-32 lg:w-48 bg-dark-yellow/50 max-md:hidden" data-animate></div>
+        <div class="h-1 w-24 lg:w-32 bg-dark-yellow max-md:hidden" data-animate></div>
 
         <!-- Discuss A Project -->
         <div class="flex flex-col" data-animate>
-          <h2 class="font-poppins font-extralight text-4xl max-xl:text-3xl max-lg:text-2xl max-sm:text-xl text-white leading-relaxed uppercase tracking-[0.2em]">
+          <h2 class="font-poppins font-light text-5xl max-xl:text-4xl max-lg:text-3xl max-sm:text-2xl text-white/40 leading-relaxed uppercase tracking-[0.3em]">
             Discuss A<br />Project
           </h2>
         </div>
@@ -74,12 +67,12 @@
       <!-- Social Icons Section -->
       <div class="flex items-center justify-center mt-8 max-sm:mt-5" data-animate>
         <!-- Social Icons -->
-        <div class="flex flex-row justify-center gap-2 max-sm:gap-1 items-center">
+        <div class="flex flex-row justify-center gap-6 max-sm:gap-4 items-center">
               <!-- GitHub -->
               <a id="link-github" href="https://github.com/fortune-c" target="_blank" rel="noopener noreferrer"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="GitHub">
-                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" max-sm:width="60" max-sm:height="60" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5608)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5608)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />
@@ -130,7 +123,7 @@
               <a id="link-linkedin" href="https://linkedin.com/in/fortune-c" target="_blank" rel="noopener noreferrer"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="LinkedIn">
-                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" max-sm:width="60" max-sm:height="60" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5598)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5598)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />
@@ -185,7 +178,7 @@
               <a id="link-instagram" href="https://instagram.com/fortune_c" target="_blank" rel="noopener noreferrer"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Instagram">
-                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" max-sm:width="60" max-sm:height="60" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5612)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5612)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />
@@ -240,7 +233,7 @@
               <a id="link-dribbble" href="#" target="_blank" rel="noopener noreferrer"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Dribbble">
-                <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" max-sm:width="60" max-sm:height="60" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5602)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5602)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />
@@ -296,7 +289,7 @@
               <a id="link-behance" href="#"
                 class="hover:scale-110 active:scale-95 transition-transform duration-200 ease-out cursor-pointer hidden"
                 aria-label="Behance">
-                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="54" height="54" max-sm:width="64" max-sm:height="64" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_dn_422_5616)">
                     <circle cx="26.9" cy="26.8999" r="18" fill="url(#paint0_linear_422_5616)" fill-opacity="0.2"
                       shape-rendering="crispEdges" />

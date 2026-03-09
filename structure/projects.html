@@ -10,10 +10,10 @@
     <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
 </head>
 
-<body class="bg-dark-green h-screen flex flex-col items-center justify-center overflow-hidden py-5 px-3">
+<body class="bg-dark-green min-h-screen flex flex-col items-center justify-center overflow-y-auto py-5 px-3">
     <!-- Content Container with Image Background -->
     <div
-        class="relative w-full h-full bg-[url(../assets/bg.png)] bg-cover bg-center rounded-sm overflow-hidden flex flex-col max-sm:h-[95vh] shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]">
+        class="relative w-full min-h-full bg-[url(../assets/bg.png)] bg-cover bg-center rounded-sm overflow-y-auto flex flex-col max-sm:min-h-[95vh] shadow-[inset_0_0_10px_rgba(0,0,0,0.5)]">
 
         <!-- Gradient Overlay -->
         <div
@@ -21,22 +21,14 @@
         </div>
 
         <!-- Navigation -->
-        <nav class="relative z-10 m-7 max-sm:m-4 flex flex-row items-center" data-animate>
+        <nav class="relative z-10 m-7 max-sm:my-8 max-sm:mx-4 flex flex-row items-center justify-between" data-animate>
             <a href="/">
-                <img src="/assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-8 max-sm:h-8" />
+                <img src="/assets/logo.png" alt="fortune-c logo" class="w-11 h-13 max-sm:w-10 max-sm:h-12" />
             </a>
-            <ul
-                class="flex flex-row gap-10 max-sm:gap-5 mx-auto text-white font-chela font-bold text-lg max-sm:text-sm">
-                <li>
-                    <a href="/about" class="hover:text-light-yellow transition-colors duration-200">About Me</a>
-                </li>
-                <li>
-                    <a href="/projects"
-                        class="hover:text-light-yellow transition-colors duration-200 text-light-yellow">Project</a>
-                </li>
-                <li>
-                    <a href="/contact" class="hover:text-light-yellow transition-colors duration-200">Contact</a>
-                </li>
+            <ul class="flex flex-row gap-8 max-sm:gap-4 text-white font-chela font-bold text-lg max-sm:text-[15px]">
+                <li><a href="/about" class="hover:text-light-yellow transition-colors duration-200">About Me</a></li>
+                <li><a href="/projects" class="text-light-yellow">Project</a></li>
+                <li><a href="/contact" class="hover:text-light-yellow transition-colors duration-200">Contact</a></li>
             </ul>
         </nav>
 
@@ -61,23 +53,23 @@
                 </div>
 
                 <!-- Right: Text Content -->
-                <div class="flex-[0.8] flex flex-col justify-center min-w-0" data-animate>
+                <div class="flex-[0.8] flex flex-col justify-center min-w-0 max-sm:mt-8" data-animate>
                     <p id="project-subtitle"
-                        class="font-jetbrains text-white/90 text-lg max-sm:text-sm transition-opacity duration-300">
+                        class="font-jetbrains text-white/90 text-lg max-sm:text-[13px] transition-opacity duration-300">
                         Voter Api design</p>
                     <h2 id="project-title"
-                        class="font-jetbrains font-bold text-4xl max-sm:text-2xl text-white mt-2 tracking-widest uppercase transition-opacity duration-300">
+                        class="font-jetbrains font-bold text-4xl max-sm:text-3xl text-white mt-1 uppercase tracking-widest transition-opacity duration-300">
                         VOTER API</h2>
-                    <hr class="w-full border-t-2 border-white mt-8 max-sm:mt-4 opacity-80" />
+                    <hr class="w-full border-t border-white/20 mt-6 max-sm:mt-4 transition-opacity duration-300" />
                     <p id="project-desc"
-                        class="font-jetbrains text-white/90 text-lg max-sm:text-sm mt-4 transition-opacity duration-300 leading-relaxed">
+                        class="font-jetbrains text-white/90 text-lg max-sm:text-[15px] mt-4 transition-opacity duration-300 leading-relaxed max-sm:leading-loose">
                         Loading project details...
                     </p>
-                    <div class="flex flex-row gap-4 mt-6">
+                    <div class="flex flex-row gap-6 mt-6 max-sm:mt-8">
                         <a id="project-github" href="#"
-                            class="font-jetbrains text-light-yellow font-bold text-lg max-sm:text-sm hover:underline transition-all">GitHub</a>
+                            class="font-jetbrains text-light-yellow font-bold text-lg max-sm:text-[16px] hover:underline transition-all">GitHub</a>
                         <a id="project-live" href="#"
-                            class="font-jetbrains text-light-yellow font-bold text-lg max-sm:text-sm hover:underline transition-all">Live
+                            class="font-jetbrains text-light-yellow font-bold text-lg max-sm:text-[16px] hover:underline transition-all">Live
                             Demo</a>
                     </div>
                 </div>
@@ -85,7 +77,7 @@
             </div>
 
             <!-- Bottom Row: Thumbnail Strip -->
-            <div id="thumbnails-container" class="flex flex-row gap-4 mt-6 h-[20%] min-h-[100px] max-sm:h-[80px]" data-animate>
+            <div id="thumbnails-container" class="flex flex-row gap-6 mt-10 h-[15%] min-h-[100px] max-sm:min-h-[120px] max-sm:overflow-x-auto max-sm:pb-4 scrollbar-hide" data-animate>
                 <!-- Thumbnails will be injected here by script.ts -->
             </div>
 
