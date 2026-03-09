@@ -30,7 +30,8 @@ builder.Services.AddCors(options =>
                 "http://127.0.0.1:8080",
                 "http://localhost:3000",   // npm run serve
                 "https://fortune-c.github.io",
-                "https://fortune-c-p.vercel.app" 
+                "https://fortune-c-p.vercel.app",
+                "https://fortune-c.vercel.app" 
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
