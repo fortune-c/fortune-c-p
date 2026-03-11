@@ -16,6 +16,7 @@ const ADMIN_API_BASE = 'https://fortune-c-p-api.onrender.com/api';
 const AUTH_URL = `${ADMIN_API_BASE}/auth`;
 const PROJECTS_URL = `${ADMIN_API_BASE}/projects`;
 const ABOUT_URL = `${ADMIN_API_BASE}/about`;
+const UPLOAD_URL = `${ADMIN_API_BASE}/upload`;
 
 // ── UTILITIES ──────────────────────────────────────────────────────────
 const getToken = () => localStorage.getItem('fortune_token');
@@ -192,6 +193,8 @@ function openModal(project?: Project) {
     (document.getElementById('p-featured') as HTMLInputElement).checked = project?.featured || false;
     (document.getElementById('p-order') as HTMLInputElement).value = (project?.order ?? 0).toString();
 
+    updatePreview(project?.imageUrl || '');
+
     modal.classList.remove('hidden');
     modal.classList.add('flex');
 }
@@ -220,6 +223,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('save-about-btn')?.addEventListener('click', saveAboutInfo);
         
         form?.addEventListener('submit', handleProjectSubmit);
+
+        // Image Upload & Preview Listeners
+        const uploadInput = document.getElementById('p-upload') as HTMLInputElement;
+        uploadInput?.addEventListener('change', handleImageUpload);
+
+        const imageInput = document.getElementById('p-image') as HTMLInputElement;
+        imageInput?.addEventListener('input', (e) => {
+            updatePreview((e.target as HTMLInputElement).value);
+        });
     } else {
         // Login Page Handlers
         const loginForm = document.getElementById('login-form');
@@ -351,5 +363,74 @@ async function saveAboutInfo() {
     } finally {
         btn.textContent = originalText;
         btn.disabled = false;
+    }
+}
+
+// ── IMAGE UPLOAD HANDLING ────────────────────────────────────────────────
+async function handleImageUpload(e: Event) {
+    const input = e.target as HTMLInputElement;
+    if (!input.files || input.files.length === 0) return;
+
+    const file = input.files[0];
+    const formData = new FormData();
+    formData.append('file', file!);
+
+    // Show loading state in preview
+    const placeholder = document.getElementById('preview-placeholder');
+    if (placeholder) placeholder.textContent = 'Uploading...';
+
+    try {
+        const resp = await fetch(UPLOAD_URL, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${getToken()}`
+                // Note: Don't set Content-Type header for FormData, browser does it automatically with boundary
+            },
+            body: formData
+        });
+
+        if (resp.ok) {
+            const data = await resp.json();
+            const imageUrl = data.url;
+            
+            // Update input and preview
+            const imageInput = document.getElementById('p-image') as HTMLInputElement;
+            if (imageInput) imageInput.value = imageUrl;
+            updatePreview(imageUrl);
+        } else {
+            alert('Upload failed. Status: ' + resp.status);
+            if (placeholder) placeholder.textContent = 'Upload failed';
+        }
+    } catch (err) {
+        console.error('Upload Error:', err);
+        alert('Error uploading image.');
+        if (placeholder) placeholder.textContent = 'Error uploading';
+    } finally {
+        input.value = ''; // Reset file input
+    }
+}
+
+function updatePreview(url: string) {
+    const preview = document.getElementById('p-preview') as HTMLImageElement;
+    const placeholder = document.getElementById('preview-placeholder');
+    
+    if (!url) {
+        preview?.classList.add('hidden');
+        if (placeholder) {
+            placeholder.classList.remove('hidden');
+            placeholder.textContent = 'No image selected';
+        }
+        return;
+    }
+
+    if (preview) {
+        // Handle both relative and absolute URLs
+        // Note: Backend returns /uploads/..., which needs to be prefixed with backend URL if not on main domain
+        const apiDomain = ADMIN_API_BASE.replace('/api', '');
+        const fullUrl = url.startsWith('http') ? url : (url.startsWith('/') ? `${apiDomain}${url}` : url);
+        
+        preview.src = fullUrl;
+        preview.classList.remove('hidden');
+        placeholder?.classList.add('hidden');
     }
 }

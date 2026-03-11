@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "admin", "admin", "{08363F22-23A7-70B7-557A-C076A2D48378}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{82251373-5235-69EF-FB14-3CC2913E507F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend", "admin\backend\backend\backend.csproj", "{073F7008-DE03-D774-2FA2-46FDF7B281FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{073F7008-DE03-D774-2FA2-46FDF7B281FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073F7008-DE03-D774-2FA2-46FDF7B281FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073F7008-DE03-D774-2FA2-46FDF7B281FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073F7008-DE03-D774-2FA2-46FDF7B281FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82251373-5235-69EF-FB14-3CC2913E507F} = {08363F22-23A7-70B7-557A-C076A2D48378}
+		{073F7008-DE03-D774-2FA2-46FDF7B281FF} = {82251373-5235-69EF-FB14-3CC2913E507F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0FAE3DF-63CC-4A79-ACBA-1008FA1F328B}
+	EndGlobalSection
+EndGlobal
