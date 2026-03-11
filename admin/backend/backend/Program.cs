@@ -76,6 +76,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("PortfolioFrontend");
+app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
