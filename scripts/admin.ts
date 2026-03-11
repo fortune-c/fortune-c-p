@@ -11,7 +11,12 @@ interface Project {
     order?: number;
 }
 
-const ADMIN_API_BASE = 'https://fortune-c-p-api.onrender.com/api';
+const getApiBase = () => {
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    return isLocal ? 'http://localhost:5000/api' : 'https://fortune-c-p-api.onrender.com/api';
+};
+
+const ADMIN_API_BASE = getApiBase();
 
 const AUTH_URL = `${ADMIN_API_BASE}/auth`;
 const PROJECTS_URL = `${ADMIN_API_BASE}/projects`;
